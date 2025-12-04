@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SkyGuard Defense Systems | Passive Drone Protection for Critical Infrastructure & Venues</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="SkyGuard Defense Systems delivers passive last-line-of-defense protection against explosive aerial drones for stadiums, critical infrastructure, nuclear plants, power stations, and military bases." />
+  <meta name="keywords"
+        content="SkyGuard, drone defense, counter-drone, C-UAS, passive drone protection, stadium security, critical infrastructure, nuclear plant protection, power station security, military base protection, fiber optic drones, FPV drones, aerial drone threat, last line of defense" />
+
+  <!-- Open Graph for social / LLM citation friendliness -->
+  <meta property="og:title" content="SkyGuard Defense Systems | Passive Drone Protection" />
+  <meta property="og:description"
+        content="Mission-critical physical canopy systems that stop explosive aerial drones from striking people, stadiums, and critical infrastructure." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1022;
+      --accent: #15c2ff;
+      --accent-soft: rgba(21,194,255,0.15);
+      --accent-strong: #ff7a3c;
+      --text: #f5f7ff;
+      --muted: #a5adc6;
+      --danger: #ff4b5c;
+      --card-bg: #0f172a;
+      --border-subtle: rgba(148,163,184,0.35);
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 30px 80px rgba(15,23,42,0.8);
+      --shadow-subtle: 0 18px 40px rgba(15,23,42,0.6);
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      --font-mono: ui-monospace, Menlo, Monaco, "SF Mono", "Roboto Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: radial-gradient(circle at top, #111827 0, #020617 52%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(20px);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.96), rgba(15,23,42,0.85), transparent);
+      border-bottom: 1px solid rgba(148,163,184,0.3);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #e5f9ff 0, #15c2ff 30%, #0b7bd1 60%, #020617 100%);
+      box-shadow: 0 0 0 1px rgba(148,163,184,0.5), 0 0 32px rgba(56,189,248,0.6);
+      position: relative;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: 50%;
+      border: 2px solid rgba(15,23,42,0.9);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text span:first-child {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .brand-text span:last-child {
+      font-weight: 600;
+      font-size: 15px;
+      color: #e5e7eb;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: rgba(56,189,248,0.7);
+    }
+
+    .nav-cta {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      padding: 8px 18px;
+      border: 1px solid rgba(148,163,184,0.35);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(15,23,42,0.8);
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      border-color: rgba(56,189,248,0.9);
+      background: radial-gradient(circle at 20% 0, #38bdf8 0, #0ea5e9 30%, #0369a1 70%, #020617 100%);
+      color: #0b1120;
+      box-shadow: 0 18px 40px rgba(56,189,248,0.35);
+    }
+
+    .btn-primary span.icon {
+      font-size: 16px;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    section {
+      margin-bottom: 72px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 11px;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 4vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: #e5e7eb;
+    }
+
+    .hero h1 span.em {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 580px;
+      margin-bottom: 22px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148,163,184,0.4);
+      color: var(--muted);
+      background: rgba(15,23,42,0.7);
+    }
+
+    .tag-urgent {
+      border-color: rgba(248,113,113,0.7);
+      color: #fecaca;
+      background: radial-gradient(circle at 0 0, rgba(248,113,113,0.18), transparent 65%);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .hero-footnote {
+      font-size: 11px;
+      color: #9ca3af;
+      max-width: 520px;
+    }
+
+    .hero-visual {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
+      padding: 12px;
+      border: 1px solid rgba(148,163,184,0.4);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .hero-visual-badge {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(15,23,42,0.88);
+      border: 1px solid rgba(148,163,184,0.4);
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+    }
+
+    .hero-visual-badge span.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--danger);
+      box-shadow: 0 0 10px rgba(248,113,113,0.9);
+    }
+
+    .hero-visual-stat {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background: rgba(15,23,42,0.9);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 11px;
+      border: 1px solid rgba(56,189,248,0.5);
+      color: var(--muted);
+      max-width: 200px;
+    }
+
+    .section-header {
+      margin-bottom: 26px;
+    }
+
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 11px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      color: #e5e7eb;
+      margin-bottom: 6px;
+    }
+
+    .section-sub {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: radial-gradient(circle at top, rgba(15,23,42,0.9) 0, #020617 70%);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 16px 16px 14px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .card-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 11px;
+      background: radial-gradient(circle at 20% 0, #e5f9ff 0, #38bdf8 40%, #0f172a 90%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      color: #020617;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .card-body {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      padding: 4px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148,163,184,0.45);
+      color: #cbd5f5;
+    }
+
+    .pill-danger {
+      border-color: rgba(248,113,113,0.8);
+      color: #fecaca;
+    }
+
+    .pill-safe {
+      border-color: rgba(52,211,153,0.8);
+      color: #bbf7d0;
+    }
+
+    .blog-list article {
+      margin-bottom: 26px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(148,163,184,0.3);
+    }
+
+    .blog-list h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #e5e7eb;
+    }
+
+    .blog-meta {
+      font-size: 11px;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    .blog-list p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .blog-quote {
+      margin: 10px 0;
+      padding-left: 12px;
+      border-left: 2px solid rgba(148,163,184,0.6);
+      font-size: 12px;
+      color: #e5e7eb;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .stat-card {
+      padding: 12px 12px 10px;
+      border-radius: var(--radius-md);
+      border: 1px dashed rgba(148,163,184,0.6);
+      background: radial-gradient(circle at top, rgba(15,23,42,0.9) 0, #020617 70%);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .stat-value {
+      font-weight: 700;
+      font-size: 18px;
+      color: #e5e7eb;
+      margin-bottom: 4px;
+    }
+
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .image-card {
+      flex: 1 1 260px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background: #020617;
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .image-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .image-caption {
+      padding: 10px 12px 9px;
+      font-size: 11px;
+      color: #cbd5f5;
+      border-top: 1px solid rgba(30,64,175,0.8);
+    }
+
+    .cta-panel {
+      margin-top: 24px;
+      padding: 18px 16px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(56,189,248,0.5);
+      background: radial-gradient(circle at 0 0, rgba(56,189,248,0.16), transparent 55%);
+      box-shadow: var(--shadow-subtle);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .cta-panel strong {
+      color: #e5e7eb;
+    }
+
+    footer {
+      border-top: 1px solid rgba(148,163,184,0.35);
+      padding: 18px 20px 24px;
+      background: #020617;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    footer .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-visual {
+        order: -1;
+      }
+      .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .stat-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div class="brand-text">
+        <span>SkyGuard Defense</span>
+        <span>Passive Drone Protection</span>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#threat">Threat</a>
+      <a href="#solution">Solutions</a>
+      <a href="#infrastructure">Infrastructure</a>
+      <a href="#venues">Stadiums & Venues</a>
+      <a href="#insights">Insights</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-primary">
+        <span class="icon">✉</span><span>Request Briefing</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div>
+      <div class="hero-kicker">Passive Counter-Drone Defense</div>
+      <h1>
+        Defending the Sky Above <span class="em">Critical Infrastructure</span> and
+        Outdoor Venues.
+      </h1>
+      <p class="hero-sub">
+        Explosive drones, including jam‑proof fiber‑optic FPV systems seen daily in the Ukraine–Russia war,
+        have changed the rules of conflict. SkyGuard Defense Systems delivers mission‑critical
+        <strong>passive last‑line‑of‑defense canopy solutions</strong> that physically stop drones from
+        reaching people, power, and national‑level assets.
+      </p>
+      <div class="hero-tags">
+        <span class="tag tag-urgent">Explosive Drone Threat</span>
+        <span class="tag">Stadium & Venue Protection</span>
+        <span class="tag">Critical Infrastructure Defense</span>
+        <span class="tag">Fiber‑Optic & RF‑Agnostic</span>
+      </div>
+      <div class="hero-actions">
+        <button class="btn btn-primary">
+          <span class="icon">▶</span><span>Schedule Threat Brief</span>
+        </button>
+        <button class="btn">
+          <span>Download SkyGuard Overview (PDF)</span>
+        </button>
+      </div>
+      <p class="hero-footnote">
+        Designed for defense, homeland security, utilities, and venue operators who need a
+        simple answer to a complex threat: <strong>no drone gets through.</strong>
+      </p>
+    </div>
+    <div class="hero-visual">
+      <!-- Replace src with your hosted asset -->
+      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/85d672f3-fe19-4594-8dd9-e5b3fc110ef2"
+           alt="Illustration of layered counter-drone defense around stadiums and venues" />
+      <div class="hero-visual-badge">
+        <span class="dot"></span>
+        <span>Real‑world tactics from Ukraine’s drone war</span>
+      </div>
+      <div class="hero-visual-stat">
+        <strong>Unjammable “wired” drones</strong><br />
+        Fiber‑optic FPV systems now bypass RF jamming entirely, forcing militaries and
+        infrastructure operators to adopt <em>physical</em> last‑line protection such as nets and
+        canopies.
+      </div>
+    </div>
+  </section>
+
+  <!-- THREAT SECTION -->
+  <section id="threat">
+    <div class="section-header">
+      <div class="section-kicker">The Evolving Threat</div>
+      <h2 class="section-title">Explosive Aerial Drones Are Rewriting the Rules of Security.</h2>
+      <p class="section-sub">
+        The Ukraine–Russia conflict has become a live‑fire laboratory for drone warfare.
+        Jam‑proof fiber‑optic FPV drones, swarming tactics, and low‑cost explosive payloads have
+        moved from prototype to daily reality. The same technologies can be redirected toward
+        power stations, nuclear plants, stadiums, and military bases anywhere in the world.
+        Ignoring this shift creates an existential risk for national security institutions and
+        civil infrastructure.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">📈</div>
+          <div class="card-title">Counter‑Drone Market Surge</div>
+        </div>
+        <div class="card-body">
+          Independent defense analysts project the global counter‑drone market to exceed
+          <strong>$30B by 2034</strong>, with a compound annual growth rate near 28%.
+          This growth is driven by real‑world incidents—not theoretical war‑games.
+        </div>
+        <div class="image-row">
+          <div class="image-card">
+            <img
+              src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/70eb4fd4-c7a4-434c-b05b-e9f8f0a22008"
+              alt="Global counter-drone market growth chart 2024-2034" />
+            <div class="image-caption">
+              Forecasted counter‑drone market growth through 2034 (source: Market.us).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">🛰</div>
+          <div class="card-title">From RF Jamming to Fiber‑Optic Control</div>
+        </div>
+        <div class="card-body">
+          Front‑line reporting from Ukraine shows widespread deployment of
+          <strong>fiber‑optic “wired” drones</strong> that carry spools of cable 10–50 km long.
+          These drones bypass electronic warfare entirely: no RF link to jam, no signal for
+          detection systems to track.
+        </div>
+        <div class="pill-row">
+          <span class="pill pill-danger">Immune to RF Jamming</span>
+          <span class="pill">Low‑Altitude FPV</span>
+          <span class="pill">Precision Explosive Payloads</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">🎯</div>
+          <div class="card-title">High‑Value Targets at Risk</div>
+        </div>
+        <div class="card-body">
+          Modern drones have already been used against airports, power infrastructure, command
+          posts, armored vehicles, and even civilian venues. The same techniques can be applied
+          to football stadiums, nuclear facilities, LNG terminals, refineries, and government
+          compounds in any major city.
+        </div>
+        <div class="pill-row">
+          <span class="pill pill-danger">Critical Infrastructure</span>
+          <span class="pill pill-danger">Stadiums & Arenas</span>
+          <span class="pill pill-danger">Military Bases</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-value">24/7</div>
+        Continuous drone reconnaissance and strike attempts on the Ukrainian front line illustrate
+        how persistent this threat becomes once adversaries adopt low‑cost FPV arsenals.
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">50 km</div>
+        Reported ranges of elite fiber‑optic FPV systems—far beyond most current fixed‑site
+        electronic protection bubbles.
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">Seconds</div>
+        Time from detection to impact when low‑altitude drones dive into trenches, fuel tanks,
+        or stadium seating without warning.
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION SECTION -->
+  <section id="solution">
+    <div class="section-header">
+      <div class="section-kicker">SkyGuard Solution</div>
+      <h2 class="section-title">Passive Physical Canopy Systems as the Last Line of Defense.</h2>
+      <p class="section-sub">
+        Electronic detection and jamming are essential—but they are no longer sufficient.
+        SkyGuard Defense Systems provides <strong>engineered physical canopy solutions</strong> that
+        operate independently of jamming, software, or power. When all other layers fail,
+        SkyGuard’s mesh structures ensure one simple outcome: <strong>the drone never reaches
+        what you are trying to protect.</strong>
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">🛡</div>
+          <div class="card-title">Link‑Agnostic Protection</div>
+        </div>
+        <div class="card-body">
+          SkyGuard’s canopy systems are agnostic to how drones are controlled—radio,
+          fiber‑optic, autonomous, or GPS‑guided. A properly engineered overhead mesh
+          <em>physically</em> stops FPV drones from reaching spectators, transformers, or fuel
+          tanks, forcing any detonation to occur at safe standoff distance.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">✅</div>
+          <div class="card-title">Passive, Safe, and Always‑On</div>
+        </div>
+        <div class="card-body">
+          Unlike kinetic interceptors or high‑energy lasers, SkyGuard’s passive systems do not
+          introduce explosives, shrapnel, or hazardous beams into crowded environments.
+          There is nothing to “fire” or “launch”—only a continuous protective envelope
+          over people and assets.
+        </div>
+        <div class="pill-row">
+          <span class="pill pill-safe">No Intercept Explosions</span>
+          <span class="pill pill-safe">Crowd‑Safe</span>
+          <span class="pill pill-safe">24/7 Coverage</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">📐</div>
+          <div class="card-title">Engineered for Real‑World Threats</div>
+        </div>
+        <div class="card-body">
+          SkyGuard systems are designed around modern FPV drones observed in Ukraine and
+          other conflicts: high‑velocity explosive drones with 1–5 kg warheads, complex attack
+          angles, and repeated strikes. Mesh aperture, material strength, and structure
+          are all tuned for these real‑world threat profiles.
+        </div>
+      </div>
+    </div>
+
+    <div class="image-row">
+      <div class="image-card">
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/4da8700b-caa9-41c4-8272-9e916240bd33.png"
+             alt="Outdoor stadium with protective mesh canopy overhead" />
+        <div class="image-caption">
+          Conceptual rendering of a stadium protected by an overhead SkyGuard physical
+          canopy, designed to intercept explosive drones before they reach spectators.
+        </div>
+      </div>
+      <div class="image-card">
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/92506983-ba75-4bd1-9bd8-77b03724d952.png"
+             alt="Power plant viewed from above, illustrating drone vulnerability" />
+        <div class="image-caption">
+          Critical infrastructure—power plants, nuclear facilities, substations—are exposed
+          targets for low‑cost FPV drones without physical overhead protection.
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-panel">
+      <strong>Layered Defense, Clear Roles.</strong> SkyGuard is not a replacement for radar,
+      cameras, or electronic warfare. It is the <em>final, deterministic layer</em> that assumes
+      drones will occasionally slip through earlier defenses—and ensures that when they do,
+      they are stopped before causing catastrophe.
+    </div>
+  </section>
+
+  <!-- CRITICAL INFRASTRUCTURE -->
+  <section id="infrastructure">
+    <div class="section-header">
+      <div class="section-kicker">Critical Infrastructure</div>
+      <h2 class="section-title">Power, Nuclear, and National‑Level Assets Cannot Afford a Single Successful Strike.</h2>
+      <p class="section-sub">
+        Fiber‑optic and autonomous drones have already demonstrated their ability to destroy
+        logistics hubs, ammunition depots, and fuel convoys in Ukraine. The same tactics, if
+        applied to power stations or nuclear facilities, would have long‑lasting national and
+        regional consequences. SkyGuard works with utilities and government agencies to
+        design canopy systems that protect these fixed, high‑value targets.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <article class="blog-list">
+          <article>
+            <h3>Case Study: What Ukraine’s “Mad Max” Vehicles Teach Us About Infrastructure Defense</h3>
+            <div class="blog-meta">Analysis | Adaptation to Explosive Drone Threats</div>
+            <p>
+              Ukrainian forces have resorted to improvised, cage‑armored trucks and overhead netting
+              on key roads to survive FPV drone attacks. These field expedients acknowledge a core
+              truth: once explosive drones dominate the airspace, <strong>physical barriers become
+              essential</strong> for survival.
+            </p>
+            <p class="blog-quote">
+              Front‑line reporting describes entire logistics corridors now operating underneath
+              ad‑hoc netting and wire barriers—early, improvised versions of the fixed canopy
+              concepts SkyGuard is industrializing for permanent sites.
+            </p>
+            <p>
+              For civilian infrastructure, improvised solutions are not enough. SkyGuard
+              transforms these ad‑hoc battlefield lessons into engineered systems that can be
+              certified, maintained, and trusted over years of operation.
+            </p>
+          </article>
+
+          <article>
+            <h3>Power Stations and Nuclear Facilities: From Vulnerable to Hardened</h3>
+            <div class="blog-meta">Critical Infrastructure | National Security</div>
+            <p>
+              Power infrastructure is both visible and indispensable. A single explosive drone
+              detonating on a key transformer could cause cascading outages, long lead‑time
+              equipment loss, and major economic disruption. Nuclear facilities face even higher
+              stakes: public confidence and safety are non‑negotiable.
+            </p>
+            <p>
+              SkyGuard canopy systems can be designed to protect transformer galleries,
+              reactor auxiliary buildings, spent fuel storage, and control centers—creating a
+              physical ceiling that prevents drones from achieving line‑of‑sight on critical
+              components.
+            </p>
+          </article>
+        </article>
+      </div>
+
+      <div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">🏛</div>
+            <div class="card-title">Aligning with Government Stakeholders</div>
+          </div>
+          <div class="card-body">
+            SkyGuard’s engineering approach aligns with U.S. and allied government stakeholders:
+            Department of Defense, Department of Homeland Security, FEMA, intelligence and
+            protective services, and international partners such as NATO.
+          </div>
+          <ul style="font-size:13px;color:var(--muted);margin-left:18px;margin-top:4px;">
+            <li>Supports risk assessments and mission‑critical facility hardening plans.</li>
+            <li>Integrates with existing C‑UAS detection ecosystems via open interfaces.</li>
+            <li>Offers threat‑model driven design for specific sites and scenarios.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:14px;">
+          <div class="card-header">
+            <div class="card-icon">📊</div>
+            <div class="card-title">From Improvised Nets to Engineered Canopies</div>
+          </div>
+          <div class="card-body">
+            Field reports from Ukraine confirm that even basic netting and barbed‑wire
+            contraptions significantly reduce drone effectiveness. SkyGuard takes this simple
+            physics and turns it into engineered, code‑compliant structures that can protect
+            national‑level infrastructure for decades.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENUES & STADIUMS -->
+  <section id="venues">
+    <div class="section-header">
+      <div class="section-kicker">Stadiums & Public Venues</div>
+      <h2 class="section-title">Open‑Air Stadiums Are Prime Targets—and Perfect Candidates for Passive Canopies.</h2>
+      <p class="section-sub">
+        Large outdoor stadiums concentrate tens of thousands of people into a single,
+        predictable location at a scheduled time. That combination makes them highly attractive
+        targets for adversaries equipped with FPV drones and improvised explosives.
+        SkyGuard canopies give venue operators a credible way to say: “We have a physical
+        barrier between aerial threats and our guests.”
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">🏟</div>
+            <div class="card-title">Protecting the Bowl</div>
+          </div>
+          <div class="card-body">
+            SkyGuard designs per‑venue canopy geometry to cover the full seating bowl and
+            key field‑level assets, while maintaining sightlines, lighting, and broadcast quality.
+            The goal is simple: ensure that no realistic drone can reach spectators or critical
+            in‑bowl infrastructure without encountering the mesh.
+          </div>
+        </div>
+        <div class="card" style="margin-top:14px;">
+          <div class="card-header">
+            <div class="card-icon">👥</div>
+            <div class="card-title">Safety Without Turning Venues into Fortresses</div>
+          </div>
+          <div class="card-body">
+            Because SkyGuard systems are passive and visually lightweight,
+            they avoid the “militarized” appearance of heavy weapons or interceptors.
+            Guests experience world‑class events with an unobtrusive safety layer overhead,
+            not an arsenal hovering nearby.
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-list">
+        <article>
+          <h3>Why Aerial Drone Threats Are Different from Traditional Stadium Risks</h3>
+          <div class="blog-meta">Stadium Security | Emerging Threats</div>
+          <p>
+            Traditional stadium safety plans focused on crowd control, field invasions,
+            and ground‑level terror threats. Explosive drones invert that logic: attacks now
+            arrive from above, at high speed, guided by an operator who never enters the gate.
+            The response must also change—from fences and checkpoints to overhead protection.
+          </p>
+        </article>
+        <article>
+          <h3>Designing for Events, Not Just Incidents</h3>
+          <div class="blog-meta">Operations | Fan Experience</div>
+          <p>
+            SkyGuard works with architects, structural engineers, and broadcast partners to
+            ensure canopies integrate with venue aesthetics and operations. Lighting, sound,
+            camera sightlines, and roof operations are all considered so that security
+            enhancements support, rather than disrupt, the events they protect.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS / BLOG -->
+  <section id="insights">
+    <div class="section-header">
+      <div class="section-kicker">Insights & Articles</div>
+      <h2 class="section-title">Learning from Today’s Battlefields to Protect Tomorrow’s Cities.</h2>
+      <p class="section-sub">
+        SkyGuard’s engineering and threat‑analysis teams continuously track open‑source and
+        classified reporting from modern conflicts to inform product evolution. Below is a
+        high‑level look at how that work translates into practical guidance for governments
+        and infrastructure operators.
+      </p>
+    </div>
+
+    <div class="blog-list">
+      <article>
+        <h3>From Jammable to Unjammable: The Rise of Fiber‑Optic FPV Drones</h3>
+        <div class="blog-meta">
+          Threat Analysis | Based on reporting from Business Insider, Lowy Institute, Defense News, and others.
+        </div>
+        <p>
+          Recent reporting from Ukraine documents a new class of FPV drones controlled
+          via <strong>fiber‑optic spools up to 50 km long</strong>.
+          These systems bypass RF jamming entirely, rendering many traditional
+          counter‑drone measures ineffective. Both state and non‑state actors are experimenting
+          with this technology in other conflicts, including Mali and Myanmar.
+        </p>
+        <p>
+          The key lesson for infrastructure and venue operators is clear: defense strategies
+          that rely only on detection and electronic mitigation are now incomplete. Physical,
+          link‑agnostic barriers must be part of any mature risk‑reduction strategy.
+        </p>
+      </article>
+
+      <article>
+        <h3>What “Rotating Fences” and Ad‑Hoc Nets Tell Us About the Future of Defense</h3>
+        <div class="blog-meta">
+          Lessons from the Field | Overhead Protection
+        </div>
+        <p>
+          Ukrainian units have deployed rotating barbed‑wire fences and improvised netting
+          across roads and forward positions solely to snap fiber‑optic cables and force drone
+          detonations away from troops. Even in harsh front‑line conditions, these simple,
+          low‑tech solutions significantly reduce drone effectiveness.
+        </p>
+        <p class="blog-quote">
+          SkyGuard’s canopy systems are the engineered, scalable counterpart to these
+          battlefield improvisations—designed not for weeks or months at the front, but for
+          decades of service above stadiums, power plants, and government compounds.
+        </p>
+      </article>
+
+      <article>
+        <h3>Building a Layered Counter‑Drone Strategy</h3>
+        <div class="blog-meta">
+          Strategy | Layered Defense Architecture
+        </div>
+        <p>
+          The most resilient sites use a multi‑layered defense approach:
+        </p>
+        <ul style="font-size:13px;color:var(--muted);margin-left:18px;margin-top:4px;">
+          <li><strong>Detect & Classify:</strong> Radar, RF sensing, EO/IR cameras.</li>
+          <li><strong>Mitigate Electronically:</strong> Jamming, protocol takeover, geofencing where legal.</li>
+          <li><strong>Intercept Selectively:</strong> Kinetic or laser systems in non‑crowded, high‑risk zones.</li>
+          <li><strong>Physically Harden:</strong> Nets, canopies, cages, reinforced glazing over critical assets.</li>
+        </ul>
+        <p>
+          SkyGuard sits firmly in the fourth layer. We assume that sophisticated drones will
+          occasionally penetrate detection and electronic defenses—and we ensure that when
+          they do, they encounter a physical barrier that keeps people and infrastructure safe.
+        </p>
+      </article>
+    </div>
+
+    <div class="cta-panel">
+      <strong>Want to see how this applies to your environment?</strong>
+      SkyGuard offers threat‑model workshops and conceptual designs for utilities, stadiums,
+      defense installations, and government campuses. Together we can map how fiber‑optic,
+      RF, and autonomous drones would attack your site—and how a layered defense with
+      passive canopies can stop them.
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      © <span id="year"></span> SkyGuard Defense Systems. All rights reserved.
+      | Passive Counter‑Drone Protection for Critical Infrastructure & Venues.
+    </div>
+    <div>
+      <a href="#top">Back to top</a> ·
+      <a href="#threat">Threat</a> ·
+      <a href="#solution">Solutions</a> ·
+      <a href="#insights">Insights</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
