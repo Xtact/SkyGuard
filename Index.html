@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>SkyGuard Defense Systems | Passive Drone Protection for Critical Infrastructure & Venues</title>
+<html lang="en"><head>
+    <meta charset="UTF-8"
+    <title>SkyGuard Defense Systems | Passive Drone Protection for Critical Infrastructure & Venues</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
         content="SkyGuard Defense Systems delivers passive last-line-of-defense protection against explosive aerial drones for stadiums, critical infrastructure, nuclear plants, power stations, and military bases." />
@@ -14,1055 +13,2686 @@
   <meta property="og:description"
         content="Mission-critical physical canopy systems that stop explosive aerial drones from striking people, stadiums, and critical infrastructure." />
   <meta property="og:type" content="website" />
-
-  <style>
-    :root {
-      --bg: #050816;
-      --bg-alt: #0b1022;
-      --accent: #15c2ff;
-      --accent-soft: rgba(21,194,255,0.15);
-      --accent-strong: #ff7a3c;
-      --text: #f5f7ff;
-      --muted: #a5adc6;
-      --danger: #ff4b5c;
-      --card-bg: #0f172a;
-      --border-subtle: rgba(148,163,184,0.35);
-      --radius-lg: 16px;
-      --radius-md: 12px;
-      --radius-pill: 999px;
-      --shadow-soft: 0 30px 80px rgba(15,23,42,0.8);
-      --shadow-subtle: 0 18px 40px rgba(15,23,42,0.6);
-      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      --font-mono: ui-monospace, Menlo, Monaco, "SF Mono", "Roboto Mono", monospace;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-sans);
-      background: radial-gradient(circle at top, #111827 0, #020617 52%, #000 100%);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(20px);
-      background: linear-gradient(to bottom, rgba(15,23,42,0.96), rgba(15,23,42,0.85), transparent);
-      border-bottom: 1px solid rgba(148,163,184,0.3);
-    }
-
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .brand-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 20%, #e5f9ff 0, #15c2ff 30%, #0b7bd1 60%, #020617 100%);
-      box-shadow: 0 0 0 1px rgba(148,163,184,0.5), 0 0 32px rgba(56,189,248,0.6);
-      position: relative;
-    }
-
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      inset: 8px;
-      border-radius: 50%;
-      border: 2px solid rgba(15,23,42,0.9);
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-text span:first-child {
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      font-size: 11px;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    .brand-text span:last-child {
-      font-weight: 600;
-      font-size: 15px;
-      color: #e5e7eb;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      padding-bottom: 2px;
-      border-bottom: 1px solid transparent;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-      border-bottom-color: rgba(56,189,248,0.7);
-    }
-
-    .nav-cta {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .btn {
-      border-radius: var(--radius-pill);
-      padding: 8px 18px;
-      border: 1px solid rgba(148,163,184,0.35);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(15,23,42,0.8);
-      color: var(--muted);
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      border-color: rgba(56,189,248,0.9);
-      background: radial-gradient(circle at 20% 0, #38bdf8 0, #0ea5e9 30%, #0369a1 70%, #020617 100%);
-      color: #0b1120;
-      box-shadow: 0 18px 40px rgba(56,189,248,0.35);
-    }
-
-    .btn-primary span.icon {
-      font-size: 16px;
-    }
-
-    .btn-primary:hover {
-      filter: brightness(1.08);
-      transform: translateY(-1px);
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 32px 20px 80px;
-    }
-
-    section {
-      margin-bottom: 72px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 40px;
-      align-items: center;
-      margin-top: 20px;
-    }
-
-    .hero-kicker {
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 11px;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
-
-    .hero h1 {
-      font-size: clamp(32px, 4vw, 44px);
-      line-height: 1.15;
-      margin-bottom: 16px;
-      color: #e5e7eb;
-    }
-
-    .hero h1 span.em {
-      color: var(--accent);
-    }
-
-    .hero-sub {
-      color: var(--muted);
-      font-size: 15px;
-      max-width: 580px;
-      margin-bottom: 22px;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 22px;
-    }
-
-    .tag {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      padding: 6px 12px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(148,163,184,0.4);
-      color: var(--muted);
-      background: rgba(15,23,42,0.7);
-    }
-
-    .tag-urgent {
-      border-color: rgba(248,113,113,0.7);
-      color: #fecaca;
-      background: radial-gradient(circle at 0 0, rgba(248,113,113,0.18), transparent 65%);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .hero-footnote {
-      font-size: 11px;
-      color: #9ca3af;
-      max-width: 520px;
-    }
-
-    .hero-visual {
-      border-radius: var(--radius-lg);
-      background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
-      padding: 12px;
-      border: 1px solid rgba(148,163,184,0.4);
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-visual img {
-      width: 100%;
-      border-radius: 12px;
-      display: block;
-    }
-
-    .hero-visual-badge {
-      position: absolute;
-      left: 16px;
-      top: 16px;
-      padding: 6px 12px;
-      border-radius: var(--radius-pill);
-      background: rgba(15,23,42,0.88);
-      border: 1px solid rgba(148,163,184,0.4);
-      font-size: 11px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--muted);
-    }
-
-    .hero-visual-badge span.dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--danger);
-      box-shadow: 0 0 10px rgba(248,113,113,0.9);
-    }
-
-    .hero-visual-stat {
-      position: absolute;
-      bottom: 16px;
-      right: 16px;
-      background: rgba(15,23,42,0.9);
-      border-radius: 12px;
-      padding: 10px 12px;
-      font-size: 11px;
-      border: 1px solid rgba(56,189,248,0.5);
-      color: var(--muted);
-      max-width: 200px;
-    }
-
-    .section-header {
-      margin-bottom: 26px;
-    }
-
-    .section-kicker {
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      font-size: 11px;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    .section-title {
-      font-size: 22px;
-      color: #e5e7eb;
-      margin-bottom: 6px;
-    }
-
-    .section-sub {
-      font-size: 14px;
-      color: var(--muted);
-      max-width: 700px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: radial-gradient(circle at top, rgba(15,23,42,0.9) 0, #020617 70%);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      padding: 16px 16px 14px;
-      box-shadow: var(--shadow-subtle);
-    }
-
-    .card-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-
-    .card-icon {
-      width: 30px;
-      height: 30px;
-      border-radius: 11px;
-      background: radial-gradient(circle at 20% 0, #e5f9ff 0, #38bdf8 40%, #0f172a 90%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 17px;
-      color: #020617;
-    }
-
-    .card-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #e5e7eb;
-    }
-
-    .card-body {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .pill {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      padding: 4px 8px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(148,163,184,0.45);
-      color: #cbd5f5;
-    }
-
-    .pill-danger {
-      border-color: rgba(248,113,113,0.8);
-      color: #fecaca;
-    }
-
-    .pill-safe {
-      border-color: rgba(52,211,153,0.8);
-      color: #bbf7d0;
-    }
-
-    .blog-list article {
-      margin-bottom: 26px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(148,163,184,0.3);
-    }
-
-    .blog-list h3 {
-      font-size: 16px;
-      margin-bottom: 6px;
-      color: #e5e7eb;
-    }
-
-    .blog-meta {
-      font-size: 11px;
-      color: #9ca3af;
-      margin-bottom: 6px;
-    }
-
-    .blog-list p {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .blog-quote {
-      margin: 10px 0;
-      padding-left: 12px;
-      border-left: 2px solid rgba(148,163,184,0.6);
-      font-size: 12px;
-      color: #e5e7eb;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 10px;
-    }
-
-    .stat-card {
-      padding: 12px 12px 10px;
-      border-radius: var(--radius-md);
-      border: 1px dashed rgba(148,163,184,0.6);
-      background: radial-gradient(circle at top, rgba(15,23,42,0.9) 0, #020617 70%);
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .stat-value {
-      font-weight: 700;
-      font-size: 18px;
-      color: #e5e7eb;
-      margin-bottom: 4px;
-    }
-
-    .image-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 12px;
-    }
-
-    .image-card {
-      flex: 1 1 260px;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      background: #020617;
-      overflow: hidden;
-      box-shadow: var(--shadow-subtle);
-    }
-
-    .image-card img {
-      width: 100%;
-      display: block;
-    }
-
-    .image-caption {
-      padding: 10px 12px 9px;
-      font-size: 11px;
-      color: #cbd5f5;
-      border-top: 1px solid rgba(30,64,175,0.8);
-    }
-
-    .cta-panel {
-      margin-top: 24px;
-      padding: 18px 16px;
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(56,189,248,0.5);
-      background: radial-gradient(circle at 0 0, rgba(56,189,248,0.16), transparent 55%);
-      box-shadow: var(--shadow-subtle);
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .cta-panel strong {
-      color: #e5e7eb;
-    }
-
-    footer {
-      border-top: 1px solid rgba(148,163,184,0.35);
-      padding: 18px 20px 24px;
-      background: #020617;
-      font-size: 11px;
-      color: #9ca3af;
-    }
-
-    footer .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-visual {
-        order: -1;
-      }
-      .grid-3 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .grid-2 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .stat-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-  </style>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --navy-dark: #0A1628;
+            --navy-steel: #1E3A5F;
+            --gold-accent: #D4AF37;
+            --text-light: #E8EEF2;
+            --text-muted: #8FA3B8;
+            --border-subtle: #2A4A6F;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--navy-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-subtle);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold-accent);
+            letter-spacing: 3px;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .logo span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            margin-top: -4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-accent);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            height: 90vh;
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-steel) 50%, #0A1628 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero .differentiator {
+            font-size: 1.1rem;
+            color: var(--gold-accent);
+            margin: 1.5rem 0;
+            padding: 1rem 2rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold-accent);
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold-accent);
+            color: var(--navy-dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(212, 175, 55, 0.5);
+            background: #E5C047;
+        }
+
+        /* Section Styles */
+        section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, var(--navy-steel) 0%, #152844 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .product-card.visible {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .product-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold-accent);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+            border-color: var(--gold-accent);
+        }
+
+        .product-card:hover:before {
+            transform: scaleX(1);
+        }
+
+        .product-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold-accent);
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-card h3 {
+            font-size: 1.6rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card .tagline {
+            font-size: 1rem;
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .product-feature {
+            background: rgba(212, 175, 55, 0.08);
+            padding: 1rem;
+            border-left: 3px solid var(--gold-accent);
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .specs-preview {
+            margin: 1.5rem 0;
+        }
+
+        .specs-preview table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .specs-preview td {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .specs-preview td:first-child {
+            color: var(--text-muted);
+            width: 40%;
+        }
+
+        .specs-preview td:last-child {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .view-details {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            color: var(--gold-accent);
+            border: 1px solid var(--gold-accent);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .view-details:hover {
+            background: var(--gold-accent);
+            color: var(--navy-dark);
+        }
+
+        .specs-full {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .specs-full.expanded {
+            max-height: 800px;
+            margin-top: 1.5rem;
+        }
+
+        .specs-full table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .specs-full th,
+        .specs-full td {
+            padding: 0.7rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .specs-full th {
+            color: var(--gold-accent);
+            font-weight: 600;
+        }
+
+        .specs-full td {
+            color: var(--text-light);
+        }
+
+        /* Technology Section */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tech-card {
+            background: linear-gradient(135deg, #1E3A5F 0%, #152844 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tech-card:before {
+            content: '⚡';
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            opacity: 0.2;
+        }
+
+        .tech-card:hover {
+            border-color: var(--gold-accent);
+            transform: translateY(-4px);
+        }
+
+        .tech-card h3 {
+            font-size: 1.3rem;
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+        }
+
+        .tech-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Diagrams Section */
+        .diagrams-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .diagram-card {
+            background: var(--navy-steel);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .diagram-card:hover {
+            border-color: var(--gold-accent);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
+        }
+
+        .diagram-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .diagram-card .caption {
+            padding: 1.5rem;
+        }
+
+        .diagram-card h3 {
+            color: var(--gold-accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .diagram-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Why SkyGuard Section */
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(30, 58, 95, 0.3);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .advantage-card:hover {
+            background: rgba(30, 58, 95, 0.5);
+            border-color: var(--gold-accent);
+        }
+
+        .advantage-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .advantage-card h3 {
+            color: var(--gold-accent);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .advantage-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Materials Gallery */
+        .materials-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        /* Pricing Section Styles */
+        .pricing-overview {
+            background: linear-gradient(135deg, var(--navy-steel) 0%, #152844 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+            overflow-x: auto;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .pricing-table th {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold-accent);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        .pricing-table td {
+            padding: 0.9rem 1rem;
+            color: var(--text-light);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .pricing-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .pricing-table .product-name {
+            color: var(--gold-accent);
+            font-weight: 600;
+        }
+
+        .pricing-table .price-highlight {
+            color: var(--gold-accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .product-breakdown {
+            margin-top: 3rem;
+        }
+
+        .breakdown-card {
+            background: linear-gradient(135deg, var(--navy-steel) 0%, #152844 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .breakdown-header {
+            padding: 1.5rem 2rem;
+            background: rgba(212, 175, 55, 0.1);
+            border-bottom: 1px solid var(--gold-accent);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .breakdown-header:hover {
+            background: rgba(212, 175, 55, 0.15);
+        }
+
+        .breakdown-header h3 {
+            color: var(--gold-accent);
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .breakdown-header .toggle-icon {
+            font-size: 1.5rem;
+            color: var(--gold-accent);
+            transition: transform 0.3s ease;
+        }
+
+        .breakdown-header.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .breakdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .breakdown-content.expanded {
+            max-height: 2000px;
+        }
+
+        .breakdown-inner {
+            padding: 2rem;
+        }
+
+        .cost-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cost-box {
+            background: rgba(212, 175, 55, 0.08);
+            padding: 1.2rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--gold-accent);
+        }
+
+        .cost-box label {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cost-box .amount {
+            color: var(--gold-accent);
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .materials-breakdown {
+            margin: 2rem 0;
+        }
+
+        .materials-breakdown h4 {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .tech-investment {
+            background: linear-gradient(135deg, #1E3A5F 0%, #152844 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tech-investment h3 {
+            color: var(--gold-accent);
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-grid-pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tech-cost-card {
+            background: rgba(212, 175, 55, 0.08);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .tech-cost-card h4 {
+            color: var(--gold-accent);
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .tech-cost-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .tech-cost-card .cost {
+            color: var(--text-light);
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .facility-examples {
+            margin-top: 3rem;
+        }
+
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .facility-card {
+            background: linear-gradient(135deg, var(--navy-steel) 0%, #152844 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .facility-card:hover {
+            border-color: var(--gold-accent);
+            transform: translateY(-4px);
+        }
+
+        .facility-card h4 {
+            color: var(--gold-accent);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .facility-detail {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .facility-detail label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .facility-detail span {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .facility-cost {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--gold-accent);
+            text-align: center;
+        }
+
+        .facility-cost .amount {
+            color: var(--gold-accent);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .comparison-section {
+            margin-top: 3rem;
+            background: linear-gradient(135deg, var(--navy-steel) 0%, #152844 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .comparison-section h3 {
+            color: var(--gold-accent);
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .insight-box {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold-accent);
+            border-radius: 6px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .insight-box .icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .insight-box p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .insight-box strong {
+            color: var(--gold-accent);
+        }
+
+        @media (max-width: 768px) {
+            .pricing-table {
+                font-size: 0.8rem;
+            }
+            
+            .pricing-table th,
+            .pricing-table td {
+                padding: 0.6rem 0.5rem;
+            }
+            
+            .cost-summary {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .material-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.3s ease;
+        }
+
+        .material-img:hover {
+            transform: scale(1.05);
+            border-color: var(--gold-accent);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--navy-steel) 0%, #152844 100%);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .contact-info h3 {
+            color: var(--gold-accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .info-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item label {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, var(--navy-steel) 0%, #152844 100%);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(10, 22, 40, 0.5);
+            border: 1px solid var(--border-subtle);
+            border-radius: 4px;
+            color: var(--text-light);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold-accent);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1rem;
+            background: var(--gold-accent);
+            color: var(--navy-dark);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: #E5C047;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #050C15;
+            border-top: 1px solid var(--border-subtle);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        .compliance-badges {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 0.4rem 1rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold-accent);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: var(--gold-accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .diagrams-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-<header>
-  <div class="nav-inner">
-    <div class="brand">
-      <div class="brand-mark"></div>
-      <div class="brand-text">
-        <span>SkyGuard Defense</span>
-        <span>Passive Drone Protection</span>
-      </div>
-    </div>
-    <nav class="nav-links">
-      <a href="#threat">Threat</a>
-      <a href="#solution">Solutions</a>
-      <a href="#infrastructure">Infrastructure</a>
-      <a href="#venues">Stadiums & Venues</a>
-      <a href="#insights">Insights</a>
-    </nav>
-    <div class="nav-cta">
-      <button class="btn btn-primary">
-        <span class="icon">✉</span><span>Request Briefing</span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div>
-      <div class="hero-kicker">Passive Counter-Drone Defense</div>
-      <h1>
-        Defending the Sky Above <span class="em">Critical Infrastructure</span> and
-        Outdoor Venues.
-      </h1>
-      <p class="hero-sub">
-        Explosive drones, including jam‑proof fiber‑optic FPV systems seen daily in the Ukraine–Russia war,
-        have changed the rules of conflict. SkyGuard Defense Systems delivers mission‑critical
-        <strong>passive last‑line‑of‑defense canopy solutions</strong> that physically stop drones from
-        reaching people, power, and national‑level assets.
-      </p>
-      <div class="hero-tags">
-        <span class="tag tag-urgent">Explosive Drone Threat</span>
-        <span class="tag">Stadium & Venue Protection</span>
-        <span class="tag">Critical Infrastructure Defense</span>
-        <span class="tag">Fiber‑Optic & RF‑Agnostic</span>
-      </div>
-      <div class="hero-actions">
-        <button class="btn btn-primary">
-          <span class="icon">▶</span><span>Schedule Threat Brief</span>
-        </button>
-        <button class="btn">
-          <span>Download SkyGuard Overview (PDF)</span>
-        </button>
-      </div>
-      <p class="hero-footnote">
-        Designed for defense, homeland security, utilities, and venue operators who need a
-        simple answer to a complex threat: <strong>no drone gets through.</strong>
-      </p>
-    </div>
-    <div class="hero-visual">
-      <!-- Replace src with your hosted asset -->
-      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/85d672f3-fe19-4594-8dd9-e5b3fc110ef2"
-           alt="Illustration of layered counter-drone defense around stadiums and venues" />
-      <div class="hero-visual-badge">
-        <span class="dot"></span>
-        <span>Real‑world tactics from Ukraine’s drone war</span>
-      </div>
-      <div class="hero-visual-stat">
-        <strong>Unjammable “wired” drones</strong><br />
-        Fiber‑optic FPV systems now bypass RF jamming entirely, forcing militaries and
-        infrastructure operators to adopt <em>physical</em> last‑line protection such as nets and
-        canopies.
-      </div>
-    </div>
-  </section>
-
-  <!-- THREAT SECTION -->
-  <section id="threat">
-    <div class="section-header">
-      <div class="section-kicker">The Evolving Threat</div>
-      <h2 class="section-title">Explosive Aerial Drones Are Rewriting the Rules of Security.</h2>
-      <p class="section-sub">
-        The Ukraine–Russia conflict has become a live‑fire laboratory for drone warfare.
-        Jam‑proof fiber‑optic FPV drones, swarming tactics, and low‑cost explosive payloads have
-        moved from prototype to daily reality. The same technologies can be redirected toward
-        power stations, nuclear plants, stadiums, and military bases anywhere in the world.
-        Ignoring this shift creates an existential risk for national security institutions and
-        civil infrastructure.
-      </p>
-    </div>
-
-    <div class="grid-3">
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">📈</div>
-          <div class="card-title">Counter‑Drone Market Surge</div>
-        </div>
-        <div class="card-body">
-          Independent defense analysts project the global counter‑drone market to exceed
-          <strong>$30B by 2034</strong>, with a compound annual growth rate near 28%.
-          This growth is driven by real‑world incidents—not theoretical war‑games.
-        </div>
-        <div class="image-row">
-          <div class="image-card">
-            <img
-              src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/70eb4fd4-c7a4-434c-b05b-e9f8f0a22008"
-              alt="Global counter-drone market growth chart 2024-2034" />
-            <div class="image-caption">
-              Forecasted counter‑drone market growth through 2034 (source: Market.us).
+    <!-- Header -->
+    <header id="header" class="scrolled">
+        <nav>
+            <div class="logo">
+                <h1>SKYGUARD</h1>
+                <span>Defense Systems</span>
             </div>
-          </div>
-        </div>
-      </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#specifications">Specifications</a></li>
+                <li><a href="#pricing">Pricing &amp; Specs</a></li>
+                <li><a href="#contract-intelligence">Contract Intelligence</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">🛰</div>
-          <div class="card-title">From RF Jamming to Fiber‑Optic Control</div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Next-Generation Anti-Drone Defense</h2>
+            <p>Passive Protection Systems for Critical Infrastructure</p>
+            <div class="differentiator">✦ The Only Kinetic-Passive Hybrid Solution ✦</div>
+            <a href="#products" class="cta-button">Explore Systems</a>
         </div>
-        <div class="card-body">
-          Front‑line reporting from Ukraine shows widespread deployment of
-          <strong>fiber‑optic “wired” drones</strong> that carry spools of cable 10–50 km long.
-          These drones bypass electronic warfare entirely: no RF link to jam, no signal for
-          detection systems to track.
-        </div>
-        <div class="pill-row">
-          <span class="pill pill-danger">Immune to RF Jamming</span>
-          <span class="pill">Low‑Altitude FPV</span>
-          <span class="pill">Precision Explosive Payloads</span>
-        </div>
-      </div>
+    </section>
 
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">🎯</div>
-          <div class="card-title">High‑Value Targets at Risk</div>
-        </div>
-        <div class="card-body">
-          Modern drones have already been used against airports, power infrastructure, command
-          posts, armored vehicles, and even civilian venues. The same techniques can be applied
-          to football stadiums, nuclear facilities, LNG terminals, refineries, and government
-          compounds in any major city.
-        </div>
-        <div class="pill-row">
-          <span class="pill pill-danger">Critical Infrastructure</span>
-          <span class="pill pill-danger">Stadiums & Arenas</span>
-          <span class="pill pill-danger">Military Bases</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="stat-value">24/7</div>
-        Continuous drone reconnaissance and strike attempts on the Ukrainian front line illustrate
-        how persistent this threat becomes once adversaries adopt low‑cost FPV arsenals.
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">50 km</div>
-        Reported ranges of elite fiber‑optic FPV systems—far beyond most current fixed‑site
-        electronic protection bubbles.
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">Seconds</div>
-        Time from detection to impact when low‑altitude drones dive into trenches, fuel tanks,
-        or stadium seating without warning.
-      </div>
-    </div>
-  </section>
-
-  <!-- SOLUTION SECTION -->
-  <section id="solution">
-    <div class="section-header">
-      <div class="section-kicker">SkyGuard Solution</div>
-      <h2 class="section-title">Passive Physical Canopy Systems as the Last Line of Defense.</h2>
-      <p class="section-sub">
-        Electronic detection and jamming are essential—but they are no longer sufficient.
-        SkyGuard Defense Systems provides <strong>engineered physical canopy solutions</strong> that
-        operate independently of jamming, software, or power. When all other layers fail,
-        SkyGuard’s mesh structures ensure one simple outcome: <strong>the drone never reaches
-        what you are trying to protect.</strong>
-      </p>
-    </div>
-
-    <div class="grid-3">
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">🛡</div>
-          <div class="card-title">Link‑Agnostic Protection</div>
-        </div>
-        <div class="card-body">
-          SkyGuard’s canopy systems are agnostic to how drones are controlled—radio,
-          fiber‑optic, autonomous, or GPS‑guided. A properly engineered overhead mesh
-          <em>physically</em> stops FPV drones from reaching spectators, transformers, or fuel
-          tanks, forcing any detonation to occur at safe standoff distance.
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">✅</div>
-          <div class="card-title">Passive, Safe, and Always‑On</div>
-        </div>
-        <div class="card-body">
-          Unlike kinetic interceptors or high‑energy lasers, SkyGuard’s passive systems do not
-          introduce explosives, shrapnel, or hazardous beams into crowded environments.
-          There is nothing to “fire” or “launch”—only a continuous protective envelope
-          over people and assets.
-        </div>
-        <div class="pill-row">
-          <span class="pill pill-safe">No Intercept Explosions</span>
-          <span class="pill pill-safe">Crowd‑Safe</span>
-          <span class="pill pill-safe">24/7 Coverage</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <div class="card-icon">📐</div>
-          <div class="card-title">Engineered for Real‑World Threats</div>
-        </div>
-        <div class="card-body">
-          SkyGuard systems are designed around modern FPV drones observed in Ukraine and
-          other conflicts: high‑velocity explosive drones with 1–5 kg warheads, complex attack
-          angles, and repeated strikes. Mesh aperture, material strength, and structure
-          are all tuned for these real‑world threat profiles.
-        </div>
-      </div>
-    </div>
-
-    <div class="image-row">
-      <div class="image-card">
-        <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/4da8700b-caa9-41c4-8272-9e916240bd33.png"
-             alt="Outdoor stadium with protective mesh canopy overhead" />
-        <div class="image-caption">
-          Conceptual rendering of a stadium protected by an overhead SkyGuard physical
-          canopy, designed to intercept explosive drones before they reach spectators.
-        </div>
-      </div>
-      <div class="image-card">
-        <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/92506983-ba75-4bd1-9bd8-77b03724d952.png"
-             alt="Power plant viewed from above, illustrating drone vulnerability" />
-        <div class="image-caption">
-          Critical infrastructure—power plants, nuclear facilities, substations—are exposed
-          targets for low‑cost FPV drones without physical overhead protection.
-        </div>
-      </div>
-    </div>
-
-    <div class="cta-panel">
-      <strong>Layered Defense, Clear Roles.</strong> SkyGuard is not a replacement for radar,
-      cameras, or electronic warfare. It is the <em>final, deterministic layer</em> that assumes
-      drones will occasionally slip through earlier defenses—and ensures that when they do,
-      they are stopped before causing catastrophe.
-    </div>
-  </section>
-
-  <!-- CRITICAL INFRASTRUCTURE -->
-  <section id="infrastructure">
-    <div class="section-header">
-      <div class="section-kicker">Critical Infrastructure</div>
-      <h2 class="section-title">Power, Nuclear, and National‑Level Assets Cannot Afford a Single Successful Strike.</h2>
-      <p class="section-sub">
-        Fiber‑optic and autonomous drones have already demonstrated their ability to destroy
-        logistics hubs, ammunition depots, and fuel convoys in Ukraine. The same tactics, if
-        applied to power stations or nuclear facilities, would have long‑lasting national and
-        regional consequences. SkyGuard works with utilities and government agencies to
-        design canopy systems that protect these fixed, high‑value targets.
-      </p>
-    </div>
-
-    <div class="grid-2">
-      <div>
-        <article class="blog-list">
-          <article>
-            <h3>Case Study: What Ukraine’s “Mad Max” Vehicles Teach Us About Infrastructure Defense</h3>
-            <div class="blog-meta">Analysis | Adaptation to Explosive Drone Threats</div>
-            <p>
-              Ukrainian forces have resorted to improvised, cage‑armored trucks and overhead netting
-              on key roads to survive FPV drone attacks. These field expedients acknowledge a core
-              truth: once explosive drones dominate the airspace, <strong>physical barriers become
-              essential</strong> for survival.
-            </p>
-            <p class="blog-quote">
-              Front‑line reporting describes entire logistics corridors now operating underneath
-              ad‑hoc netting and wire barriers—early, improvised versions of the fixed canopy
-              concepts SkyGuard is industrializing for permanent sites.
-            </p>
-            <p>
-              For civilian infrastructure, improvised solutions are not enough. SkyGuard
-              transforms these ad‑hoc battlefield lessons into engineered systems that can be
-              certified, maintained, and trusted over years of operation.
-            </p>
-          </article>
-
-          <article>
-            <h3>Power Stations and Nuclear Facilities: From Vulnerable to Hardened</h3>
-            <div class="blog-meta">Critical Infrastructure | National Security</div>
-            <p>
-              Power infrastructure is both visible and indispensable. A single explosive drone
-              detonating on a key transformer could cause cascading outages, long lead‑time
-              equipment loss, and major economic disruption. Nuclear facilities face even higher
-              stakes: public confidence and safety are non‑negotiable.
-            </p>
-            <p>
-              SkyGuard canopy systems can be designed to protect transformer galleries,
-              reactor auxiliary buildings, spent fuel storage, and control centers—creating a
-              physical ceiling that prevents drones from achieving line‑of‑sight on critical
-              components.
-            </p>
-          </article>
-        </article>
-      </div>
-
-      <div>
-        <div class="card">
-          <div class="card-header">
-            <div class="card-icon">🏛</div>
-            <div class="card-title">Aligning with Government Stakeholders</div>
-          </div>
-          <div class="card-body">
-            SkyGuard’s engineering approach aligns with U.S. and allied government stakeholders:
-            Department of Defense, Department of Homeland Security, FEMA, intelligence and
-            protective services, and international partners such as NATO.
-          </div>
-          <ul style="font-size:13px;color:var(--muted);margin-left:18px;margin-top:4px;">
-            <li>Supports risk assessments and mission‑critical facility hardening plans.</li>
-            <li>Integrates with existing C‑UAS detection ecosystems via open interfaces.</li>
-            <li>Offers threat‑model driven design for specific sites and scenarios.</li>
-          </ul>
+    <!-- Products Section -->
+    <section id="products">
+        <div class="section-title fade-in visible">
+            <h2>Defense Solutions</h2>
+            <p>Advanced anti-drone mesh protection systems engineered for mission-critical applications</p>
         </div>
 
-        <div class="card" style="margin-top:14px;">
-          <div class="card-header">
-            <div class="card-icon">📊</div>
-            <div class="card-title">From Improvised Nets to Engineered Canopies</div>
-          </div>
-          <div class="card-body">
-            Field reports from Ukraine confirm that even basic netting and barbed‑wire
-            contraptions significantly reduce drone effectiveness. SkyGuard takes this simple
-            physics and turns it into engineered, code‑compliant structures that can protect
-            national‑level infrastructure for decades.
-          </div>
+        <div class="products-grid">
+            <!-- Product 1: APEX Canopy System -->
+            <div class="product-card visible">
+                <span class="product-tag">Premium</span>
+                <h3>APEX Canopy System™</h3>
+                <p class="tagline">Overhead Threat Neutralization</p>
+                <div class="product-feature">
+                    <strong>Unique Feature:</strong> Multi-layer suspended cable net creating protective dome
+                </div>
+                <div class="specs-preview">
+                    <table>
+                        <tbody><tr>
+                            <td>Coverage</td>
+                            <td>Up to 10,000 m²</td>
+                        </tr>
+                        <tr>
+                            <td>Deployment</td>
+                            <td>45 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Crew Size</td>
+                            <td>4 personnel</td>
+                        </tr>
+                        <tr>
+                            <td>Applications</td>
+                            <td>Power plants, fuel depots</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <button class="view-details" onclick="toggleSpecs(this)">View Full Specifications</button>
+                <div class="specs-full">
+                    <table>
+                        <tbody><tr>
+                            <th>Specification</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td>Materials</td>
+                            <td>Kevlar-reinforced UHMWPE mesh (Dyneema® core), 316 stainless steel support cables</td>
+                        </tr>
+                        <tr>
+                            <td>Mesh Aperture</td>
+                            <td>75mm aperture, 3.2mm wire diameter</td>
+                        </tr>
+                        <tr>
+                            <td>Support Structure</td>
+                            <td>Carbon fiber telescoping masts (8-25m height), guy-wire stabilization</td>
+                        </tr>
+                        <tr>
+                            <td>Installation Method</td>
+                            <td>Modular 4-point anchor system, rapid deployment in 45 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>280 kg (standard kit)</td>
+                        </tr>
+                        <tr>
+                            <td>Compliance</td>
+                            <td>MIL-SPEC, Berry Amendment Compliant</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+
+            <!-- Product 2: SENTINEL Perimeter Shield -->
+            <div class="product-card visible">
+                <span class="product-tag">Standard</span>
+                <h3>SENTINEL Perimeter Shield™</h3>
+                <p class="tagline">360° Facility Protection</p>
+                <div class="product-feature">
+                    <strong>Unique Feature:</strong> Vertical barrier walls with integrated sensor grid
+                </div>
+                <div class="specs-preview">
+                    <table>
+                        <tbody><tr>
+                            <td>Coverage</td>
+                            <td>Linear perimeter (modular)</td>
+                        </tr>
+                        <tr>
+                            <td>Deployment</td>
+                            <td>30 min per 10m section</td>
+                        </tr>
+                        <tr>
+                            <td>Crew Size</td>
+                            <td>2 personnel</td>
+                        </tr>
+                        <tr>
+                            <td>Applications</td>
+                            <td>Military bases, compounds</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <button class="view-details" onclick="toggleSpecs(this)">View Full Specifications</button>
+                <div class="specs-full">
+                    <table>
+                        <tbody><tr>
+                            <th>Specification</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td>Materials</td>
+                            <td>Knitted 304 stainless steel mesh with aramid fiber backing</td>
+                        </tr>
+                        <tr>
+                            <td>Mesh Aperture</td>
+                            <td>50mm aperture, 0.45mm knitted wire</td>
+                        </tr>
+                        <tr>
+                            <td>Support Structure</td>
+                            <td>FRP composite poles (6-12m), self-anchored foundation</td>
+                        </tr>
+                        <tr>
+                            <td>Installation Method</td>
+                            <td>Sectional panels, tool-free connection system</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>45 kg per 10m section</td>
+                        </tr>
+                        <tr>
+                            <td>Compliance</td>
+                            <td>MIL-SPEC, ISO 9001:2015</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+
+            <!-- Product 3: RANGER Mobile Defense -->
+            <div class="product-card visible">
+                <span class="product-tag">Mid-Range</span>
+                <h3>RANGER Mobile Defense™</h3>
+                <p class="tagline">Rapid Response Protection</p>
+                <div class="product-feature">
+                    <strong>Unique Feature:</strong> Trailer-mounted deployable system with pneumatic masts
+                </div>
+                <div class="specs-preview">
+                    <table>
+                        <tbody><tr>
+                            <td>Coverage</td>
+                            <td>Up to 500 m²</td>
+                        </tr>
+                        <tr>
+                            <td>Deployment</td>
+                            <td>5 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Crew Size</td>
+                            <td>1 operator</td>
+                        </tr>
+                        <tr>
+                            <td>Applications</td>
+                            <td>Mobile units, events</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <button class="view-details" onclick="toggleSpecs(this)">View Full Specifications</button>
+                <div class="specs-full">
+                    <table>
+                        <tbody><tr>
+                            <th>Specification</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td>Materials</td>
+                            <td>Lightweight hybrid mesh (UHMWPE + carbon fiber weave)</td>
+                        </tr>
+                        <tr>
+                            <td>Mesh Aperture</td>
+                            <td>100mm aperture, ultra-high tensile strength</td>
+                        </tr>
+                        <tr>
+                            <td>Support Structure</td>
+                            <td>Pneumatic telescoping aluminum masts (3-15m in 90 seconds)</td>
+                        </tr>
+                        <tr>
+                            <td>Installation Method</td>
+                            <td>Single-operator deployment from vehicle platform</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>850 kg (with trailer)</td>
+                        </tr>
+                        <tr>
+                            <td>Compliance</td>
+                            <td>DOT Compliant, Berry Amendment</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+
+            <!-- Product 4: FORTRESS Hybrid System -->
+            <div class="product-card visible">
+                <span class="product-tag">Ultra-Premium</span>
+                <h3>FORTRESS Hybrid System™</h3>
+                <p class="tagline">Active-Passive Integration</p>
+                <div class="product-feature">
+                    <strong>Unique Feature:</strong> Smart mesh with embedded RF sensors and automated deployment
+                </div>
+                <div class="specs-preview">
+                    <table>
+                        <tbody><tr>
+                            <td>Coverage</td>
+                            <td>Up to 25,000 m²</td>
+                        </tr>
+                        <tr>
+                            <td>Deployment</td>
+                            <td>Automated - 2 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Crew Size</td>
+                            <td>Remote operation capable</td>
+                        </tr>
+                        <tr>
+                            <td>Applications</td>
+                            <td>Nuclear facilities, critical infrastructure</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <button class="view-details" onclick="toggleSpecs(this)">View Full Specifications</button>
+                <div class="specs-full">
+                    <table>
+                        <tbody><tr>
+                            <th>Specification</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td>Materials</td>
+                            <td>Conductive mesh (steel-copper composite) with piezoelectric impact sensors</td>
+                        </tr>
+                        <tr>
+                            <td>Mesh Aperture</td>
+                            <td>Variable density 50-100mm, sensor nodes every 2m</td>
+                        </tr>
+                        <tr>
+                            <td>Support Structure</td>
+                            <td>Motorized FRP poles with hydraulic extension</td>
+                        </tr>
+                        <tr>
+                            <td>Installation Method</td>
+                            <td>IoT-connected system, integrates with existing C-UAS command centers</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>1,200 kg (base system)</td>
+                        </tr>
+                        <tr>
+                            <td>Compliance</td>
+                            <td>MIL-SPEC, NIST Cybersecurity Framework</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- VENUES & STADIUMS -->
-  <section id="venues">
-    <div class="section-header">
-      <div class="section-kicker">Stadiums & Public Venues</div>
-      <h2 class="section-title">Open‑Air Stadiums Are Prime Targets—and Perfect Candidates for Passive Canopies.</h2>
-      <p class="section-sub">
-        Large outdoor stadiums concentrate tens of thousands of people into a single,
-        predictable location at a scheduled time. That combination makes them highly attractive
-        targets for adversaries equipped with FPV drones and improvised explosives.
-        SkyGuard canopies give venue operators a credible way to say: “We have a physical
-        barrier between aerial threats and our guests.”
-      </p>
-    </div>
-
-    <div class="grid-2">
-      <div>
-        <div class="card">
-          <div class="card-header">
-            <div class="card-icon">🏟</div>
-            <div class="card-title">Protecting the Bowl</div>
-          </div>
-          <div class="card-body">
-            SkyGuard designs per‑venue canopy geometry to cover the full seating bowl and
-            key field‑level assets, while maintaining sightlines, lighting, and broadcast quality.
-            The goal is simple: ensure that no realistic drone can reach spectators or critical
-            in‑bowl infrastructure without encountering the mesh.
-          </div>
+    <!-- Technology Section -->
+    <section id="technology">
+        <div class="section-title fade-in visible">
+            <h2>Proprietary Technologies</h2>
+            <p>Innovation backed by aerospace engineering and military-grade materials science</p>
         </div>
-        <div class="card" style="margin-top:14px;">
-          <div class="card-header">
-            <div class="card-icon">👥</div>
-            <div class="card-title">Safety Without Turning Venues into Fortresses</div>
-          </div>
-          <div class="card-body">
-            Because SkyGuard systems are passive and visually lightweight,
-            they avoid the “militarized” appearance of heavy weapons or interceptors.
-            Guests experience world‑class events with an unobtrusive safety layer overhead,
-            not an arsenal hovering nearby.
-          </div>
+
+        <div class="tech-grid">
+            <div class="tech-card fade-in visible">
+                <h3>TensionLock™ Cable Architecture</h3>
+                <p>Proprietary guy-wire configuration reducing material weight by 40% while maintaining superior load distribution and structural integrity under extreme conditions.</p>
+            </div>
+            <div class="tech-card fade-in visible">
+                <h3>RapidRise™ Deployment System</h3>
+                <p>Pneumatic mast technology for sub-60-second extension. Military-grade pneumatics enable single-operator deployment with fail-safe mechanical locks.</p>
+            </div>
+            <div class="tech-card fade-in visible">
+                <h3>ImpactSense™ Monitoring</h3>
+                <p>Embedded sensors detect and report impact locations in real-time. Piezoelectric nodes provide instant threat assessment and location triangulation.</p>
+            </div>
+            <div class="tech-card fade-in visible">
+                <h3>LayerShield™ Multi-Density Mesh</h3>
+                <p>Progressive energy absorption across multiple mesh layers. Each layer engineered for specific threat profiles, from small UAS to heavier drone systems.</p>
+            </div>
+            <div class="tech-card fade-in visible">
+                <h3>WeatherProof™ Treatment</h3>
+                <p>UV-resistant, corrosion-proof coatings for 20+ year service life. Tested in extreme environments from Arctic to desert conditions.</p>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="blog-list">
-        <article>
-          <h3>Why Aerial Drone Threats Are Different from Traditional Stadium Risks</h3>
-          <div class="blog-meta">Stadium Security | Emerging Threats</div>
-          <p>
-            Traditional stadium safety plans focused on crowd control, field invasions,
-            and ground‑level terror threats. Explosive drones invert that logic: attacks now
-            arrive from above, at high speed, guided by an operator who never enters the gate.
-            The response must also change—from fences and checkpoints to overhead protection.
-          </p>
-        </article>
-        <article>
-          <h3>Designing for Events, Not Just Incidents</h3>
-          <div class="blog-meta">Operations | Fan Experience</div>
-          <p>
-            SkyGuard works with architects, structural engineers, and broadcast partners to
-            ensure canopies integrate with venue aesthetics and operations. Lighting, sound,
-            camera sightlines, and roof operations are all considered so that security
-            enhancements support, rather than disrupt, the events they protect.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- INSIGHTS / BLOG -->
-  <section id="insights">
-    <div class="section-header">
-      <div class="section-kicker">Insights & Articles</div>
-      <h2 class="section-title">Learning from Today’s Battlefields to Protect Tomorrow’s Cities.</h2>
-      <p class="section-sub">
-        SkyGuard’s engineering and threat‑analysis teams continuously track open‑source and
-        classified reporting from modern conflicts to inform product evolution. Below is a
-        high‑level look at how that work translates into practical guidance for governments
-        and infrastructure operators.
-      </p>
-    </div>
-
-    <div class="blog-list">
-      <article>
-        <h3>From Jammable to Unjammable: The Rise of Fiber‑Optic FPV Drones</h3>
-        <div class="blog-meta">
-          Threat Analysis | Based on reporting from Business Insider, Lowy Institute, Defense News, and others.
+    <!-- Specifications with Diagrams -->
+    <section id="specifications">
+        <div class="section-title fade-in visible">
+            <h2>Technical Documentation</h2>
+            <p>Blueprint diagrams, installation guides, and material specifications</p>
         </div>
-        <p>
-          Recent reporting from Ukraine documents a new class of FPV drones controlled
-          via <strong>fiber‑optic spools up to 50 km long</strong>.
-          These systems bypass RF jamming entirely, rendering many traditional
-          counter‑drone measures ineffective. Both state and non‑state actors are experimenting
-          with this technology in other conflicts, including Mali and Myanmar.
-        </p>
-        <p>
-          The key lesson for infrastructure and venue operators is clear: defense strategies
-          that rely only on detection and electronic mitigation are now incomplete. Physical,
-          link‑agnostic barriers must be part of any mature risk‑reduction strategy.
-        </p>
-      </article>
 
-      <article>
-        <h3>What “Rotating Fences” and Ad‑Hoc Nets Tell Us About the Future of Defense</h3>
-        <div class="blog-meta">
-          Lessons from the Field | Overhead Protection
+        <div class="diagrams-grid">
+            <div class="diagram-card fade-in visible">
+                <img src="https://v3b.fal.media/files/b/koala/Su3KlEPkWItKHEwf27DcB.png" alt="Technical Blueprint">
+                <div class="caption">
+                    <h3>Modular Deployment Blueprint</h3>
+                    <p>Technical specifications for anchor points, tension distribution, and load calculations. Includes foundation requirements and site preparation guidelines.</p>
+                </div>
+            </div>
+            <div class="diagram-card fade-in visible">
+                <img src="https://v3b.fal.media/files/b/tiger/i9rFMj8eN3I35hN9GlCiz.png" alt="Installation Diagram">
+                <div class="caption">
+                    <h3>Overhead Canopy Installation</h3>
+                    <p>Step-by-step installation diagram showing mast positioning, cable routing, and mesh deployment sequence for APEX Canopy System.</p>
+                </div>
+            </div>
         </div>
-        <p>
-          Ukrainian units have deployed rotating barbed‑wire fences and improvised netting
-          across roads and forward positions solely to snap fiber‑optic cables and force drone
-          detonations away from troops. Even in harsh front‑line conditions, these simple,
-          low‑tech solutions significantly reduce drone effectiveness.
-        </p>
-        <p class="blog-quote">
-          SkyGuard’s canopy systems are the engineered, scalable counterpart to these
-          battlefield improvisations—designed not for weeks or months at the front, but for
-          decades of service above stadiums, power plants, and government compounds.
-        </p>
-      </article>
 
-      <article>
-        <h3>Building a Layered Counter‑Drone Strategy</h3>
-        <div class="blog-meta">
-          Strategy | Layered Defense Architecture
+        <div class="section-title fade-in visible" style="margin-top: 4rem;">
+            <h2>Materials &amp; Components</h2>
+            <p>Aerospace-grade materials and military-spec hardware</p>
         </div>
-        <p>
-          The most resilient sites use a multi‑layered defense approach:
-        </p>
-        <ul style="font-size:13px;color:var(--muted);margin-left:18px;margin-top:4px;">
-          <li><strong>Detect & Classify:</strong> Radar, RF sensing, EO/IR cameras.</li>
-          <li><strong>Mitigate Electronically:</strong> Jamming, protocol takeover, geofencing where legal.</li>
-          <li><strong>Intercept Selectively:</strong> Kinetic or laser systems in non‑crowded, high‑risk zones.</li>
-          <li><strong>Physically Harden:</strong> Nets, canopies, cages, reinforced glazing over critical assets.</li>
-        </ul>
-        <p>
-          SkyGuard sits firmly in the fourth layer. We assume that sophisticated drones will
-          occasionally penetrate detection and electronic defenses—and we ensure that when
-          they do, they encounter a physical barrier that keeps people and infrastructure safe.
-        </p>
-      </article>
-    </div>
 
-    <div class="cta-panel">
-      <strong>Want to see how this applies to your environment?</strong>
-      SkyGuard offers threat‑model workshops and conceptual designs for utilities, stadiums,
-      defense installations, and government campuses. Together we can map how fiber‑optic,
-      RF, and autonomous drones would attack your site—and how a layered defense with
-      passive canopies can stop them.
-    </div>
-  </section>
-</main>
+        <div class="materials-gallery">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1762672551/pplx_project_search_images/535ded398a279b859ceca9097cd46f5ba4c3d6f3.png" alt="Carbon Fiber Telescoping Mast" class="material-img">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1762672552/pplx_project_search_images/1064280dd4163f910894adfe610b52b57852d8f7.png" alt="Military Mesh Netting" class="material-img">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1758777599/pplx_project_search_images/4eff54a4bc948efcf016615778771ba0129f9d53.png" alt="Power Plant Installation" class="material-img">
+        </div>
+    </section>
 
-<footer>
-  <div class="footer-inner">
-    <div>
-      © <span id="year"></span> SkyGuard Defense Systems. All rights reserved.
-      | Passive Counter‑Drone Protection for Critical Infrastructure & Venues.
-    </div>
-    <div>
-      <a href="#top">Back to top</a> ·
-      <a href="#threat">Threat</a> ·
-      <a href="#solution">Solutions</a> ·
-      <a href="#insights">Insights</a>
-    </div>
-  </div>
-</footer>
+    <!-- Pricing & Specifications Section -->
+    <section id="pricing">
+        <div class="section-title fade-in visible">
+            <h2>Pricing &amp; Specifications</h2>
+            <p>Comprehensive cost analysis and technical specifications for defense procurement</p>
+        </div>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+        <!-- Pricing Overview Table -->
+        <div class="pricing-overview fade-in visible">
+            <h3 style="color: var(--gold-accent); margin-bottom: 1rem;">Pricing Overview</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">All systems manufactured in the USA with Berry Amendment compliance</p>
+            
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Coverage</th>
+                        <th>Manufacturing Cost</th>
+                        <th>Government Price</th>
+                        <th>Commercial Price</th>
+                        <th>Per Unit Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="product-name">APEX Canopy System™</td>
+                        <td>10,000 m²</td>
+                        <td>$584,847</td>
+                        <td class="price-highlight">$818,786</td>
+                        <td class="price-highlight">$935,755</td>
+                        <td>$58.48/m²</td>
+                    </tr>
+                    <tr>
+                        <td class="product-name">SENTINEL Perimeter Shield™</td>
+                        <td>1,000 linear m</td>
+                        <td>$433,688</td>
+                        <td class="price-highlight">$607,163</td>
+                        <td class="price-highlight">$693,900</td>
+                        <td>$433.69/m</td>
+                    </tr>
+                    <tr>
+                        <td class="product-name">RANGER Mobile Defense™</td>
+                        <td>500 m²</td>
+                        <td>$41,294</td>
+                        <td class="price-highlight">$57,812</td>
+                        <td class="price-highlight">$66,071</td>
+                        <td>$82.59/m²</td>
+                    </tr>
+                    <tr>
+                        <td class="product-name">FORTRESS Hybrid System™</td>
+                        <td>25,000 m²</td>
+                        <td>$1,895,714</td>
+                        <td class="price-highlight">$2,654,000</td>
+                        <td class="price-highlight">$3,033,143</td>
+                        <td>$75.83/m²</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Detailed Product Breakdowns -->
+        <div class="product-breakdown">
+            <h3 style="color: var(--gold-accent); margin-bottom: 1.5rem; text-align: center;">Detailed Cost Breakdowns</h3>
+            
+            <!-- APEX Breakdown -->
+            <div class="breakdown-card fade-in visible">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>APEX Canopy System™ - Cost Analysis</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <div class="cost-summary">
+                            <div class="cost-box">
+                                <label>Materials Total</label>
+                                <div class="amount">$408,984</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Labor Costs</label>
+                                <div class="amount">$122,695</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Engineering</label>
+                                <div class="amount">$53,168</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Total Mfg Cost</label>
+                                <div class="amount">$584,847</div>
+                            </div>
+                        </div>
+                        
+                        <div class="materials-breakdown">
+                            <h4>Material Itemization</h4>
+                            <table class="pricing-table">
+                                <thead>
+                                    <tr>
+                                        <th>Material</th>
+                                        <th>Quantity</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dyneema® UHMWPE Mesh</td>
+                                        <td>13,800 m²</td>
+                                        <td>$207,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kevlar® Aramid Backing</td>
+                                        <td>9,200 m²</td>
+                                        <td>$110,400</td>
+                                    </tr>
+                                    <tr>
+                                        <td>316 SS Support Cables</td>
+                                        <td>2,400 m</td>
+                                        <td>$1,584</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carbon Fiber Telescoping Masts</td>
+                                        <td>24 units @ 20m</td>
+                                        <td>$72,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Guy-Wire Stabilization</td>
+                                        <td>24 units</td>
+                                        <td>$3,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ground Anchor Systems</td>
+                                        <td>72 anchors</td>
+                                        <td>$14,400</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(212, 175, 55, 0.08); border-radius: 6px;">
+                            <p style="color: var(--text-light); margin: 0;"><strong style="color: var(--gold-accent);">Volume Discounts:</strong> 10% off 5+ units | 20% off 10+ units | 30% off 20+ units</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SENTINEL Breakdown -->
+            <div class="breakdown-card fade-in visible">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>SENTINEL Perimeter Shield™ - Cost Analysis</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <div class="cost-summary">
+                            <div class="cost-box">
+                                <label>Materials Total</label>
+                                <div class="amount">$321,250</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Labor Costs</label>
+                                <div class="amount">$80,313</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Engineering</label>
+                                <div class="amount">$32,125</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Total Mfg Cost</label>
+                                <div class="amount">$433,688</div>
+                            </div>
+                        </div>
+                        
+                        <div class="materials-breakdown">
+                            <h4>Material Itemization</h4>
+                            <table class="pricing-table">
+                                <thead>
+                                    <tr>
+                                        <th>Material</th>
+                                        <th>Quantity</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>304 Stainless Steel Mesh</td>
+                                        <td>7,700 m²</td>
+                                        <td>$192,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aramid Fiber Backing</td>
+                                        <td>3,300 m²</td>
+                                        <td>$39,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FRP Composite Poles</td>
+                                        <td>200 @ 10m</td>
+                                        <td>$24,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pole Foundations</td>
+                                        <td>200 units</td>
+                                        <td>$60,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Connection Hardware</td>
+                                        <td>100 kits</td>
+                                        <td>$5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Piezoelectric Sensors</td>
+                                        <td>50 units</td>
+                                        <td>$150</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RANGER Breakdown -->
+            <div class="breakdown-card fade-in visible">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>RANGER Mobile Defense™ - Cost Analysis</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <div class="cost-summary">
+                            <div class="cost-box">
+                                <label>Materials Total</label>
+                                <div class="amount">$30,725</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Labor Costs</label>
+                                <div class="amount">$6,145</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Engineering</label>
+                                <div class="amount">$4,424</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Total Mfg Cost</label>
+                                <div class="amount">$41,294</div>
+                            </div>
+                        </div>
+                        
+                        <div class="materials-breakdown">
+                            <h4>Material Itemization</h4>
+                            <table class="pricing-table">
+                                <thead>
+                                    <tr>
+                                        <th>Material</th>
+                                        <th>Quantity</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>UHMWPE/CF Hybrid Mesh</td>
+                                        <td>550 m²</td>
+                                        <td>$10,725</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pneumatic Masts</td>
+                                        <td>4 units</td>
+                                        <td>$6,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Trailer Platform</td>
+                                        <td>1 unit</td>
+                                        <td>$5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Compressor &amp; Controls</td>
+                                        <td>1 system</td>
+                                        <td>$2,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Frame System</td>
+                                        <td>1 unit</td>
+                                        <td>$3,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Accessories</td>
+                                        <td>1 set</td>
+                                        <td>$2,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hardware Kit</td>
+                                        <td>1 kit</td>
+                                        <td>$1,500</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORTRESS Breakdown -->
+            <div class="breakdown-card fade-in visible">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>FORTRESS Hybrid System™ - Cost Analysis</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <div class="cost-summary">
+                            <div class="cost-box">
+                                <label>Materials Total</label>
+                                <div class="amount">$1,221,072</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Labor Costs</label>
+                                <div class="amount">$427,375</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Engineering</label>
+                                <div class="amount">$247,267</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Total Mfg Cost</label>
+                                <div class="amount">$1,895,714</div>
+                            </div>
+                        </div>
+                        
+                        <div class="materials-breakdown">
+                            <h4>Material Itemization</h4>
+                            <table class="pricing-table">
+                                <thead>
+                                    <tr>
+                                        <th>Material</th>
+                                        <th>Quantity</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Steel-Copper Composite</td>
+                                        <td>28,000 m²</td>
+                                        <td>$980,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Motorized FRP Poles</td>
+                                        <td>42 @ 18m</td>
+                                        <td>$9,072</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hydraulic Systems</td>
+                                        <td>42 units</td>
+                                        <td>$126,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Piezo Sensors</td>
+                                        <td>7,000 units</td>
+                                        <td>$21,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RF Sensors</td>
+                                        <td>280 units</td>
+                                        <td>$42,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IoT Gateways</td>
+                                        <td>6 units</td>
+                                        <td>$2,400</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Control System</td>
+                                        <td>1 system</td>
+                                        <td>$15,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Network Infrastructure</td>
+                                        <td>1 set</td>
+                                        <td>$8,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Backup Power</td>
+                                        <td>1 unit</td>
+                                        <td>$5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Foundations</td>
+                                        <td>42 units</td>
+                                        <td>$12,600</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Investment -->
+        <div class="tech-investment fade-in visible">
+            <h3>Proprietary Technology Development Costs</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">Total R&amp;D Investment: <span style="color: var(--gold-accent); font-weight: 700; font-size: 1.3rem;">$725,000</span></p>
+            
+            <div class="tech-grid-pricing">
+                <div class="tech-cost-card">
+                    <h4>TensionLock™ Cable Architecture</h4>
+                    <p>Proprietary guy-wire reducing weight 40%</p>
+                    <div class="cost">Dev Cost: $115,000</div>
+                    <div class="cost">Implementation: $500/install</div>
+                </div>
+                <div class="tech-cost-card">
+                    <h4>RapidRise™ Deployment</h4>
+                    <p>Pneumatic mast sub-60-sec extension</p>
+                    <div class="cost">Dev Cost: $195,000</div>
+                    <div class="cost">Implementation: $3,500/unit</div>
+                </div>
+                <div class="tech-cost-card">
+                    <h4>ImpactSense™ Monitoring</h4>
+                    <p>Real-time impact detection</p>
+                    <div class="cost">Dev Cost: $190,000</div>
+                    <div class="cost">Implementation: $8/sensor, $6K/yr cloud</div>
+                </div>
+                <div class="tech-cost-card">
+                    <h4>LayerShield™ Multi-Density</h4>
+                    <p>Progressive energy absorption</p>
+                    <div class="cost">Dev Cost: $120,000</div>
+                    <div class="cost">Implementation: 25% material premium</div>
+                </div>
+                <div class="tech-cost-card">
+                    <h4>WeatherProof™ Treatment</h4>
+                    <p>20+ year UV/corrosion protection</p>
+                    <div class="cost">Dev Cost: $105,000</div>
+                    <div class="cost">Implementation: $2.50/m²</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Facility Coverage Examples -->
+        <div class="facility-examples fade-in visible">
+            <h3 style="color: var(--gold-accent); margin-bottom: 1.5rem; text-align: center;">Facility Coverage Examples</h3>
+            
+            <div class="facility-grid">
+                <div class="facility-card">
+                    <h4>🏭 Power Plant Protection</h4>
+                    <div class="facility-detail">
+                        <label>Facility Size:</label>
+                        <span>150,000 m²</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>System:</label>
+                        <span>APEX Canopy</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>Units Required:</label>
+                        <span>15</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>Timeline:</label>
+                        <span>8-10 weeks</span>
+                    </div>
+                    <div class="facility-cost">
+                        <div class="amount">$12.3M - $14M</div>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <h4>⛽ Fuel Depot Protection</h4>
+                    <div class="facility-detail">
+                        <label>Facility Size:</label>
+                        <span>40,000 m²</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>System:</label>
+                        <span>APEX Canopy</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>Units Required:</label>
+                        <span>4</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>Timeline:</label>
+                        <span>3-4 weeks</span>
+                    </div>
+                    <div class="facility-cost">
+                        <div class="amount">$3.3M - $3.7M</div>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <h4>🎖️ Military Base Protection</h4>
+                    <div class="facility-detail">
+                        <label>Facility Size:</label>
+                        <span>200,000 m²</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>System:</label>
+                        <span>FORTRESS Hybrid</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>Units Required:</label>
+                        <span>8</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>Timeline:</label>
+                        <span>12-16 weeks</span>
+                    </div>
+                    <div class="facility-cost">
+                        <div class="amount">$21.2M - $24.3M</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitive Comparison -->
+        <div class="comparison-section fade-in visible">
+            <h3>Competitive Market Analysis</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Solution Type</th>
+                        <th>Cost Range</th>
+                        <th>Physical Protection</th>
+                        <th>Sensors</th>
+                        <th>Deployment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="product-name">SkyGuard Systems</td>
+                        <td class="price-highlight">$58-434/m²</td>
+                        <td style="color: var(--gold-accent);">✓ High</td>
+                        <td style="color: var(--gold-accent);">✓ Optional</td>
+                        <td style="color: var(--gold-accent);">✓ Rapid</td>
+                    </tr>
+                    <tr>
+                        <td>Electronic C-UAS</td>
+                        <td>$500K-$5M</td>
+                        <td>✗ None</td>
+                        <td>✓ Yes</td>
+                        <td>Permanent</td>
+                    </tr>
+                    <tr>
+                        <td>Ballistic Barriers</td>
+                        <td>$800-$1,200/m²</td>
+                        <td>✓ High</td>
+                        <td>✗ No</td>
+                        <td>Weeks</td>
+                    </tr>
+                    <tr>
+                        <td>Standard Nets</td>
+                        <td>$200-$400/m²</td>
+                        <td>Medium</td>
+                        <td>✗ No</td>
+                        <td>Days</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Key Insights -->
+        <div class="insights-grid">
+            <div class="insight-box fade-in visible">
+                <div class="icon">📊</div>
+                <p><strong>Mesh materials</strong> account for 72-80% of total costs</p>
+            </div>
+            <div class="insight-box fade-in visible">
+                <div class="icon">💰</div>
+                <p><strong>FORTRESS</strong> achieves lowest per-m² cost at <strong>$75.83/m²</strong></p>
+            </div>
+            <div class="insight-box fade-in visible">
+                <div class="icon">⚡</div>
+                <p><strong>RANGER</strong> fastest deployment: <strong>5 minutes</strong></p>
+            </div>
+            <div class="insight-box fade-in visible">
+                <div class="icon">📈</div>
+                <p>Break-even after <strong>15 installations</strong></p>
+            </div>
+            <div class="insight-box fade-in visible">
+                <div class="icon">🎯</div>
+                <p>Volume discounts up to <strong>30%</strong></p>
+            </div>
+            <div class="insight-box fade-in visible">
+                <div class="icon">🇺🇸</div>
+                <p><strong>Berry Amendment</strong> compliant - US manufacturing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why SkyGuard Section -->
+    <section id="why-skyguard">
+        <div class="section-title fade-in visible">
+            <h2>Why SkyGuard Defense Systems</h2>
+            <p>Unmatched expertise in passive drone defense solutions</p>
+        </div>
+
+        <div class="advantages-grid">
+            <div class="advantage-card fade-in visible">
+                <div class="advantage-icon">🛡️</div>
+                <h3>Proven Materials</h3>
+                <p>Only company using aerospace-grade Dyneema® and carbon fiber for unmatched strength-to-weight ratio</p>
+            </div>
+            <div class="advantage-card fade-in visible">
+                <div class="advantage-icon">⚡</div>
+                <h3>Rapid Deployment</h3>
+                <p>Industry-leading setup times from 5 minutes to 45 minutes depending on system complexity</p>
+            </div>
+            <div class="advantage-card fade-in visible">
+                <div class="advantage-icon">📐</div>
+                <h3>Modular Scalability</h3>
+                <p>Systems scale from 100m² to 50,000m² with identical components for simplified logistics</p>
+            </div>
+            <div class="advantage-card fade-in visible">
+                <div class="advantage-icon">🔗</div>
+                <h3>Hybrid Ready</h3>
+                <p>Integrates seamlessly with electronic C-UAS systems for comprehensive threat mitigation</p>
+            </div>
+            <div class="advantage-card fade-in visible">
+                <div class="advantage-icon">🇺🇸</div>
+                <h3>US Manufacturing</h3>
+                <p>Berry Amendment compliant, veteran-owned business supporting American infrastructure</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contract Intelligence Section -->
+    <section id="contract-intelligence">
+        <div class="section-title fade-in visible">
+            <h2>Contract Intelligence</h2>
+            <p>Pentagon Budget Analysis, Contract Sources &amp; Acquisition Strategy</p>
+        </div>
+
+        <!-- Pentagon Budget Breakdown -->
+        <div class="pricing-overview fade-in visible">
+            <h3 style="color: var(--gold-accent); margin-bottom: 1rem;">Pentagon Budget Breakdown (2025-2026)</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Total defense allocation for Counter-UAS capabilities and autonomous systems</p>
+            
+            <div class="cost-summary" style="margin-bottom: 2rem;">
+                <div class="cost-box">
+                    <label>Total Pentagon C-UAS</label>
+                    <div class="amount">$7.4B</div>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">FY25</p>
+                </div>
+                <div class="cost-box">
+                    <label>Counter-UAS Capabilities</label>
+                    <div class="amount">$3.1B</div>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">FY26 Request</p>
+                </div>
+                <div class="cost-box">
+                    <label>Autonomy &amp; Autonomous Systems</label>
+                    <div class="amount">$13.4B</div>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">FY26 New Category</p>
+                </div>
+                <div class="cost-box">
+                    <label>Army Flexible Funding</label>
+                    <div class="amount">$1.7B</div>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">Includes $693M counter-drone</p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--text-light); margin: 2rem 0 1rem 0; font-size: 1.2rem;">Service-Specific Breakdown</h4>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Allocation</th>
+                        <th>Key Programs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="product-name">Army</td>
+                        <td class="price-highlight">$1.54B</td>
+                        <td>Counter-drone $693M, Coyote $116M, M-SHORAD $729M</td>
+                    </tr>
+                    <tr>
+                        <td class="product-name">Marines</td>
+                        <td class="price-highlight">$847M</td>
+                        <td>Force Protection, EW, Air Defense (3 line items)</td>
+                    </tr>
+                    <tr>
+                        <td class="product-name">Navy</td>
+                        <td class="price-highlight">Part of $9.4B</td>
+                        <td>Unmanned systems portfolio</td>
+                    </tr>
+                    <tr>
+                        <td class="product-name">Air Force</td>
+                        <td class="price-highlight">Embedded</td>
+                        <td>Air defense modernization</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(212, 175, 55, 0.1); border: 1px solid var(--gold-accent); border-radius: 8px;">
+                <h4 style="color: var(--gold-accent); margin-bottom: 0.8rem;">🎯 Non-Defense Opportunity: FEMA C-UAS Grant Program</h4>
+                <div class="cost-summary">
+                    <div class="cost-box">
+                        <label>Total Grant Pool</label>
+                        <div class="amount">$500M</div>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">FY26-FY27</p>
+                    </div>
+                    <div class="cost-box">
+                        <label>Eligibility</label>
+                        <div class="amount" style="font-size: 1rem; line-height: 1.3;">11 World Cup states initially</div>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">All 56 states/territories by FY27</p>
+                    </div>
+                    <div class="cost-box">
+                        <label>Application Deadline</label>
+                        <div class="amount" style="font-size: 1rem;">Dec 5, 2025</div>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">Awards: Feb 27, 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contract Sources & Platforms -->
+        <div class="comparison-section fade-in visible" style="margin-top: 3rem;">
+            <h3>Contract Sources &amp; Platforms</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Primary platforms for federal contracting opportunities</p>
+            
+            <div class="facility-grid">
+                <div class="facility-card">
+                    <h4 style="margin-bottom: 1rem;">🔗 SAM.gov</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">System for Award Management - Register company, search opportunities, submit bids</p>
+                    <div class="facility-detail">
+                        <label>Action:</label>
+                        <span>Register &amp; Setup Searches</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>Search Terms:</label>
+                        <span style="font-size: 0.85rem;">C-UAS, counter-drone, anti-UAS</span>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://sam.gov" target="_blank" class="cta-button" style="width: 100%; margin: 0; padding: 0.8rem; font-size: 0.95rem;">Visit SAM.gov</a>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <h4 style="margin-bottom: 1rem;">💰 USAspending.gov</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">Federal Spending Transparency - Research past awards, competitor analysis, spending patterns</p>
+                    <div class="facility-detail">
+                        <label>Action:</label>
+                        <span>Competitor Research</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>Focus:</label>
+                        <span>DoD Spending Patterns</span>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://www.usaspending.gov/agency/department-of-defense" target="_blank" class="cta-button" style="width: 100%; margin: 0; padding: 0.8rem; font-size: 0.95rem;">Visit USAspending</a>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <h4 style="margin-bottom: 1rem;">🚀 Defense Innovation Unit</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">Submit tech solutions for Replicator 2, rapid acquisition programs</p>
+                    <div class="facility-detail">
+                        <label>Action:</label>
+                        <span>Submit Tech Solutions</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>Program:</label>
+                        <span>Replicator 2</span>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://www.diu.mil" target="_blank" class="cta-button" style="width: 100%; margin: 0; padding: 0.8rem; font-size: 0.95rem;">Visit DIU</a>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <h4 style="margin-bottom: 1rem;">🎯 Joint Counter-Small UAS Office</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">Track requirements, test events, certification standards</p>
+                    <div class="facility-detail">
+                        <label>Action:</label>
+                        <span>Track Test Events</span>
+                    </div>
+                    <div class="facility-detail">
+                        <label>Event:</label>
+                        <span>Silent Swarm Testing</span>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://www.jco.mil" target="_blank" class="cta-button" style="width: 100%; margin: 0; padding: 0.8rem; font-size: 0.95rem;">Visit JCO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Contracts Awarded -->
+        <div class="pricing-overview fade-in visible" style="margin-top: 3rem;">
+            <h3 style="color: var(--gold-accent); margin-bottom: 1rem;">Recent Contracts Awarded</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Major C-UAS contract awards and program opportunities</p>
+            
+            <div class="breakdown-card">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>Raytheon (RTX) - Coyote Interceptors</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <div class="cost-summary">
+                            <div class="cost-box">
+                                <label>Contract Value</label>
+                                <div class="amount">$197M</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Award Date</label>
+                                <div class="amount" style="font-size: 1.1rem;">Sept 2024</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Contract Type</label>
+                                <div class="amount" style="font-size: 0.95rem;">Cost-plus-fixed-fee</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Completion</label>
+                                <div class="amount" style="font-size: 1rem;">Sept 30, 2027</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(212, 175, 55, 0.08); border-left: 3px solid var(--gold-accent); border-radius: 4px;">
+                            <p style="color: var(--text-light); margin: 0 0 0.5rem 0;"><strong style="color: var(--gold-accent);">Additional Award:</strong> $75M (2024) - 600 Coyote Block 2C interceptors</p>
+                            <p style="color: var(--text-light); margin: 0;"><strong style="color: var(--gold-accent);">Key Insight:</strong> Army needs minimum 6,000 kinetic interceptors FY25-29</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breakdown-card" style="margin-top: 1.5rem;">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>M-SHORAD Program</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <div class="cost-summary">
+                            <div class="cost-box">
+                                <label>Program Acceleration</label>
+                                <div class="amount">$729M</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Requirement</label>
+                                <div class="amount" style="font-size: 0.9rem; line-height: 1.3;">Mobile counter-UAS</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Platform</label>
+                                <div class="amount" style="font-size: 1rem;">JLTV Mounted</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Weight Limit</label>
+                                <div class="amount">&lt;2,000 lbs</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(212, 175, 55, 0.08); border-left: 3px solid var(--gold-accent); border-radius: 4px;">
+                            <p style="color: var(--text-light); margin: 0;"><strong style="color: var(--gold-accent);">Opportunity:</strong> Systems for maneuver platoons, mobile deployment capability required</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breakdown-card" style="margin-top: 1.5rem;">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>FEMA C-UAS Grant Program</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <div class="cost-summary">
+                            <div class="cost-box">
+                                <label>Total Funding</label>
+                                <div class="amount">$500M</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Near-Term</label>
+                                <div class="amount">$250M</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Pass-Through Rate</label>
+                                <div class="amount">97%</div>
+                            </div>
+                            <div class="cost-box">
+                                <label>Eligible States</label>
+                                <div class="amount" style="font-size: 0.9rem;">11 + DC/PR</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(212, 175, 55, 0.08); border-left: 3px solid var(--gold-accent); border-radius: 4px;">
+                            <p style="color: var(--text-light); margin: 0;"><strong style="color: var(--gold-accent);">Target:</strong> 11 World Cup states plus DC/PR initially, expanding to all 56 states/territories by FY27</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contract Acquisition Process -->
+        <div class="tech-investment fade-in visible" style="margin-top: 3rem;">
+            <h3>Contract Acquisition Process</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">5-phase approach to winning government contracts</p>
+            
+            <div class="breakdown-card">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>Phase 1: Registration (Month 0-1)</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <ul style="color: var(--text-light); line-height: 1.8; padding-left: 1.5rem;">
+                            <li>SAM.gov Registration - CAGE code, DUNS number</li>
+                            <li>NAICS Codes: 336413, 541712</li>
+                            <li>Small Business Certifications: 8(a), HUBZone, SDVOSB</li>
+                            <li>System for Award Management - Active &amp; Compliant</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breakdown-card" style="margin-top: 1rem;">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>Phase 2: Intelligence Gathering (Ongoing)</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <h4 style="color: var(--gold-accent); margin-bottom: 0.8rem;">Weekly Activities</h4>
+                        <ul style="color: var(--text-light); line-height: 1.8; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                            <li>Search SAM.gov saved searches</li>
+                            <li>Monitor USAspending.gov for competitor awards</li>
+                            <li>Subscribe to DefenseScoop, Breaking Defense alerts</li>
+                            <li>Track JCO test events (Silent Swarm)</li>
+                        </ul>
+                        <h4 style="color: var(--gold-accent); margin-bottom: 0.8rem;">Monthly Activities</h4>
+                        <ul style="color: var(--text-light); line-height: 1.8; padding-left: 1.5rem;">
+                            <li>Review service budget justification documents</li>
+                            <li>Attend industry days (virtual/in-person)</li>
+                            <li>Network at AUSA, SHOT Show, IDEX</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breakdown-card" style="margin-top: 1rem;">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>Phase 3: Opportunity Qualification</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <h4 style="color: var(--gold-accent); margin-bottom: 0.8rem;">Key Criteria</h4>
+                        <ul style="color: var(--text-light); line-height: 1.8; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                            <li>Budget availability (FY25-29 program years)</li>
+                            <li>Requirement match (passive vs kinetic, fixed vs mobile)</li>
+                            <li>Competition level (Berry Amendment advantage)</li>
+                            <li>Timeline (rapid vs traditional acquisition)</li>
+                        </ul>
+                        <h4 style="color: var(--gold-accent); margin-bottom: 0.8rem;">High-Probability Targets for SkyGuard</h4>
+                        <div class="insights-grid">
+                            <div class="insight-box">
+                                <div class="icon">🎖️</div>
+                                <p><strong>Army M-SHORAD</strong><br>Mobile passive systems</p>
+                            </div>
+                            <div class="insight-box">
+                                <div class="icon">🏭</div>
+                                <p><strong>Fixed Site Defense</strong><br>Power plants, fuel depots</p>
+                            </div>
+                            <div class="insight-box">
+                                <div class="icon">🛡️</div>
+                                <p><strong>Force Protection</strong><br>Military base perimeters</p>
+                            </div>
+                            <div class="insight-box">
+                                <div class="icon">🚨</div>
+                                <p><strong>FEMA C-UAS Grant</strong><br>State/local agencies (no cost-share)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breakdown-card" style="margin-top: 1rem;">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>Phase 4: Proposal Development</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <h4 style="color: var(--gold-accent); margin-bottom: 0.8rem;">Critical Elements</h4>
+                        <ul style="color: var(--text-light); line-height: 1.8; padding-left: 1.5rem; margin-bottom: 1rem;">
+                            <li><strong>Technical Approach</strong> - Match requirements exactly</li>
+                            <li><strong>Past Performance</strong> - Prototype demos, test data</li>
+                            <li><strong>Price Competitiveness</strong> - 20-40% below barriers</li>
+                            <li><strong>Compliance</strong> - Berry Amendment, MIL-SPEC, DCAA</li>
+                            <li><strong>Small Business Subcontracting Plan</strong></li>
+                        </ul>
+                        <p style="color: var(--text-muted); margin: 0;"><strong style="color: var(--gold-accent);">Timeline:</strong> 30-90 days typical for RFPs</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breakdown-card" style="margin-top: 1rem;">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>Phase 5: Post-Award Execution</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <h4 style="color: var(--gold-accent); margin-bottom: 0.8rem;">Success Factors</h4>
+                        <ul style="color: var(--text-light); line-height: 1.8; padding-left: 1.5rem;">
+                            <li><strong>DCAA Compliant Accounting</strong></li>
+                            <li><strong>Earned Value Management</strong> - Monthly reports</li>
+                            <li><strong>Quality Control</strong> - ISO 9001, test documentation</li>
+                            <li><strong>On-Time Delivery</strong> - 95%+ = future contracts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Open Opportunities -->
+        <div class="comparison-section fade-in" style="margin-top: 3rem;">
+            <h3>Open Opportunities (Immediate Action)</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Active SAM.gov listings and grant programs</p>
+            
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Opportunity</th>
+                        <th>Action Required</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="product-name">Silent Swarm 2025</td>
+                        <td>Submit for experimentation participation</td>
+                        <td><a href="https://sam.gov/opp/a5dd0cb585a24748a96a1adc52ef8006/view" target="_blank" style="color: var(--gold-accent); text-decoration: underline;">View Opportunity</a></td>
+                    </tr>
+                    <tr>
+                        <td class="product-name">C-UAS International Cooperative</td>
+                        <td>Apply for R&amp;D (US/UK/Canada)</td>
+                        <td><a href="https://sam.gov/opp/f6b891407b994ba98bf080d979b1fd60/view" target="_blank" style="color: var(--gold-accent); text-decoration: underline;">View Opportunity</a></td>
+                    </tr>
+                    <tr>
+                        <td class="product-name">FEMA C-UAS Grant Program</td>
+                        <td>Contact State Administrative Agencies</td>
+                        <td><a href="https://www.fema.gov/grants/counter-unmanned-aircraft-systems" target="_blank" style="color: var(--gold-accent); text-decoration: underline;">View Program</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SkyGuard Action Plan -->
+        <div class="tech-investment fade-in" style="margin-top: 3rem;">
+            <h3>SkyGuard Action Plan</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Tactical roadmap for contract acquisition success</p>
+            
+            <div class="breakdown-card">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>✓ Next 30 Days</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <ul style="color: var(--text-light); line-height: 2; padding-left: 1.5rem;">
+                            <li>Register on SAM.gov (obtain CAGE code)</li>
+                            <li>Set up saved searches for C-UAS opportunities</li>
+                            <li>Identify 5 State Agencies in World Cup states</li>
+                            <li>Prepare capability statement (1-page PDF)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breakdown-card" style="margin-top: 1rem;">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>✓ Next 90 Days</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <ul style="color: var(--text-light); line-height: 2; padding-left: 1.5rem;">
+                            <li>Attend AUSA conference - 10×10 booth</li>
+                            <li>Submit for Silent Swarm 2025 experimentation</li>
+                            <li>Develop relationships with 3 Army PMs (M-SHORAD)</li>
+                            <li>Complete Berry Amendment compliance audit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breakdown-card" style="margin-top: 1rem;">
+                <div class="breakdown-header" onclick="toggleBreakdown(this)">
+                    <h3>✓ Next 6 Months</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="breakdown-content">
+                    <div class="breakdown-inner">
+                        <ul style="color: var(--text-light); line-height: 2; padding-left: 1.5rem;">
+                            <li>Bid on 2-3 FEMA subawards through SAAs</li>
+                            <li>Prototype demonstration for Army evaluation</li>
+                            <li>Submit DIU Replicator 2 proposal</li>
+                            <li>Obtain ISO 9001 certification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Success Metrics -->
+        <div class="insights-grid fade-in" style="margin-top: 3rem;">
+            <div class="insight-box">
+                <div class="icon">🎯</div>
+                <p><strong>Win Rate Target</strong><br>35% (vs 20-25% industry average)</p>
+            </div>
+            <div class="insight-box">
+                <div class="icon">💵</div>
+                <p><strong>Average Deal Size</strong><br>$1.5M - $21M</p>
+            </div>
+            <div class="insight-box">
+                <div class="icon">⏱️</div>
+                <p><strong>Sales Cycle</strong><br>6-9 months (gov) | 2-3 months (comm)</p>
+            </div>
+            <div class="insight-box">
+                <div class="icon">📈</div>
+                <p><strong>Recurring Revenue</strong><br>15-20% annually by Year 3</p>
+            </div>
+        </div>
+
+        <!-- Competitive Advantages -->
+        <div class="comparison-section fade-in" style="margin-top: 3rem;">
+            <h3>Competitive Advantages</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">SkyGuard differentiators in government contracting</p>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">🇺🇸</div>
+                    <h3>Berry Amendment Compliance</h3>
+                    <p>Mandatory for many DoD contracts - US manufacturing provides competitive edge</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">🔬</div>
+                    <h3>5 Patent-Pending Technologies</h3>
+                    <p>Proprietary innovations protected by intellectual property portfolio</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">💰</div>
+                    <h3>40-60% Cost Advantage</h3>
+                    <p>Significantly below ballistic barriers while maintaining superior protection</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">⚡</div>
+                    <h3>Rapid Deployment</h3>
+                    <p>2-45 minutes deployment vs weeks for traditional systems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-title fade-in">
+            <h2>Request Consultation</h2>
+            <p>Connect with our defense solutions team to discuss your facility protection requirements</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info fade-in">
+                <h3>SkyGuard Defense Systems</h3>
+                <div class="info-item">
+                    <label>Headquarters</label>
+                    <p>Denver, Colorado</p>
+                </div>
+                <div class="info-item">
+                    <label>Serving</label>
+                    <p>Department of Defense<br>Department of Homeland Security<br>Critical Infrastructure Operators</p>
+                </div>
+                <div class="info-item">
+                    <label>Certifications</label>
+                    <p>Berry Amendment Compliant<br>MIL-SPEC Certified<br>ISO 9001:2015</p>
+                </div>
+                <div class="info-item">
+                    <label>Response Time</label>
+                    <p>24-48 hours for consultation requests<br>Expedited support available for DOD/DHS</p>
+                </div>
+            </div>
+
+            <div class="contact-form fade-in">
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="organization">Organization *</label>
+                        <input type="text" id="organization" name="organization" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="product">Product Interest *</label>
+                        <select id="product" name="product" required="">
+                            <option value="">Select a system...</option>
+                            <option value="apex">APEX Canopy System™</option>
+                            <option value="sentinel">SENTINEL Perimeter Shield™</option>
+                            <option value="ranger">RANGER Mobile Defense™</option>
+                            <option value="fortress">FORTRESS Hybrid System™</option>
+                            <option value="custom">Custom Solution</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" name="message" required="" placeholder="Describe your facility protection requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Request Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>SkyGuard Defense Systems</strong> | Next-Generation Anti-Drone Defense</p>
+        <p>Securing Critical Infrastructure Nationwide</p>
+        <div class="compliance-badges">
+            <span class="badge">BERRY AMENDMENT COMPLIANT</span>
+            <span class="badge">MIL-SPEC CERTIFIED</span>
+            <span class="badge">ISO 9001:2015</span>
+            <span class="badge">VETERAN OWNED</span>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.8rem;">© 2025 SkyGuard Defense Systems. All rights reserved. | ITAR Controlled Technology</p>
+    </footer>
+
+    <script>
+        // Sticky header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        
+        // Observe product cards separately
+        document.querySelectorAll('.product-card').forEach((card, index) => {
+            setTimeout(() => {
+                observer.observe(card);
+            }, index * 100);
+        });
+
+        // Toggle specifications
+        function toggleSpecs(button) {
+            const card = button.closest('.product-card');
+            const specsSection = card.querySelector('.specs-full');
+            
+            if (specsSection.classList.contains('expanded')) {
+                specsSection.classList.remove('expanded');
+                button.textContent = 'View Full Specifications';
+            } else {
+                specsSection.classList.add('expanded');
+                button.textContent = 'Hide Specifications';
+            }
+        }
+
+        // Toggle breakdown sections
+        function toggleBreakdown(header) {
+            const content = header.nextElementSibling;
+            header.classList.toggle('active');
+            content.classList.toggle('expanded');
+        }
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message
+            alert(`Thank you for your inquiry, ${data.name}. A SkyGuard Defense Systems consultant will contact you within 24-48 hours regarding ${data.product} solutions.`);
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
